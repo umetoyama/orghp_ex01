@@ -15,8 +15,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
       end
     session["devise.regist_data"] = { user: @user.attributes }
     session["devise.regist_data"][:user][:password] = params[:user][:paaword]
-    @profile = @user.build_address
-    reder :new_profie
+    @profile = @user.build_profile
+    render :new_profile
   end
 
   # GET /resource/sign_up
