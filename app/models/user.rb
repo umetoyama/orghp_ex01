@@ -3,4 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  PASSWORD_RULES = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
+
+  validates :name, presence: true
+  validates :password, format: { with: PASSWORD_RULES, mesages: '英数字のみです' }
+
 end
