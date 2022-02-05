@@ -4,8 +4,12 @@
       CMBeta
     </div>
     <ul class="entrance">
-      <li><%= link_to '新規登録', new_user_registration_path, class:"registration" %></li>
-      <li><%= link_to 'ログイン', new_user_session_path, class:"session" %></li>
+      <% unless user_signed_in? %>
+        <li><%= link_to '新規登録', new_user_registration_path, class:"registration" %></li>
+        <li><%= link_to 'ログイン', new_user_session_path, class:"session" %></li>
+      <% else %>
+        <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class:"session" %></li>
+      <% end %>
     </ul>
   </div>
   <nav class="nav">
