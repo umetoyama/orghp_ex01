@@ -8,6 +8,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new
   end
 
+  def create
+    @user = User.new(sign_up_params)
+      unless @user.valid?
+        render :new and return
+      end
+    session["devise.regist_data"] = { user: @user.attributes }
+    session["devise.regist_data"][:user][:password] = params[:user][:paaword]
+    @profile = @user.build_address
+    reder :new_profie
+  end
+
   # GET /resource/sign_up
   # def new
   #   super
