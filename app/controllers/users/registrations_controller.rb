@@ -14,9 +14,27 @@ class Users::RegistrationsController < Devise::RegistrationsController
         render :new and return
       end
     session["devise.regist_data"] = { user: @user.attributes }
-    session["devise.regist_data"][:user][:password] = params[:user][:paaword]
+    session["devise.regist_data"][:user]["password"] = params[:user][:password]
     @profile = @user.build_profile
     render :new_profile
+  end
+
+  def create_profile
+    @user = User.new(session["devise.regist_data"]["user"])
+    @profile = Profile.new(profile_params)
+      unless @profile.valid?
+        render :new_profile and return
+      end
+    @user.build_profile(@profile.attributes)
+    @user.save
+    session["devise.regist_data"]["user"].clear
+    sign_in(:user, @user)
+  end
+
+  private
+
+  def profile_params
+    params.require(:profile).permit(:position_id, :about_me)
   end
 
   # GET /resource/sign_up
