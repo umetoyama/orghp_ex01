@@ -1,7 +1,19 @@
-<h2>プロフィール作成</h2>
+<h2>Create a profile</h2>
 
 <%= form_for @profile do |f| %>
   <% render "devise/shared/error_messages", resource: @profile %>
+
+  <div class="image_up">
+    <div class="field">
+      Profile Image
+    </div>
+    <div class="click_up">
+      <small>
+        Click to upload the file
+      </small><br />
+      <%= f.file_field :image, id:"profile_image" %>
+    </div>
+  </div>
 
   <div class="field">
     <%= f.label :position %><br />

@@ -5,6 +5,6 @@ class Profile < ApplicationRecord
   belongs_to :position
   has_one_ attached :image
 
-  validates :position_id, numericality: { other_than: 1, mesages: " can't be blank" }
+  validates :position_id, numericality: { other_than: 1, mesage: " can't be blank" }
 
 end
