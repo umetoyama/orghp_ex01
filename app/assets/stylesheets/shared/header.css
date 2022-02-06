@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+.temporary_title {
+  display: flex;
+}
+
+.company {
+  width: 50vw;
+  font-size: 36px;
+}
+
+.entrance {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 50vw;
+}
+
+.registration {
+  padding-right: 2vw;
+}
+
+.session {
+  padding-right: 2vw;
+}
+
+.list-first {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.work-list {
+  text-decoration: none;
+  color: black;
+}

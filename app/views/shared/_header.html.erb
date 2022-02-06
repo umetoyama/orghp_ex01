@@ -1,0 +1,24 @@
+<header class="h1">
+  <div class="temporary_title">
+    <div class="company">
+      CMBeta
+    </div>
+    <ul class="entrance">
+      <% unless user_signed_in? %>
+        <li><%= link_to '新規登録', new_user_registration_path, class:"registration" %></li>
+        <li><%= link_to 'ログイン', new_user_session_path, class:"session" %></li>
+      <% else %>
+        <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class:"session" %></li>
+      <% end %>
+    </ul>
+  </div>
+  <nav class="nav">
+    <ul class="list-first">
+      <li><%= link_to 'work', "#", class:"work-list" %></li>
+      <li><%= link_to 'member', "#", class:"work-list" %></li>
+      <li><%= link_to 'topic', "#", class:"work-list" %></li>
+      <li><%= link_to 'company', "#", class:"work-list" %></li>
+      <li><%= link_to 'contact', "#", class:"work-list" %></li>
+    </ul>
+  </nav>
+</header>
