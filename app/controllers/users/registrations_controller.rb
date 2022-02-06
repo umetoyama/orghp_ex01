@@ -34,7 +34,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
 
   def profile_params
-    params.require(:profile).permit(:position_id, :about_me)
+    params.require(:profile).permit(:position_id, :about_me, :image)
   end
 
   # GET /resource/sign_up
