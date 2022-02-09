@@ -1,3 +1,5 @@
+const { $ } = require("@rails/ujs");
+
 document.addEventListener('DOMContentLoaded', function(){
   const postForm = document.getElementById('profile_image');
   const previewList = document.getElementById('previews');
@@ -17,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function(){
     const previewImage = document.createElement('img');
     previewImage.setAttribute('class', 'preview-image');
     previewImage.setAttribute('src', blob);
+
+    previewImage.style.cssText = "width: 20%; height: auto";
 
     previewWrapper.appendChild(previewImage);
     previewList.appendChild(previewWrapper);  

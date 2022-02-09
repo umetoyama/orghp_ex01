@@ -1,0 +1,38 @@
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.fix-content {
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  height: 10vh;
+  width: 100vw;
+  color: white;
+}
+
+.last {
+  margin: 3px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 10vh;
+}
+
+.entrance {
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+
+.management {
+  display: flex;
+  list-style: none;
+}
+
+.registration {
+  padding-right: 15px;
+}
+
+.session {
+  padding-right: 20px;
+}

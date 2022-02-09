@@ -25,10 +25,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
       unless @profile.valid?
         render :new_profile and return
       end
-    @user.build_profile(@profile.attributes)
+    # @user.build_profile(@profile.attributes)
+    # binding.pry
     @user.save
+    @profile.user_id = @user.id
+    @profile.save
     session["devise.regist_data"]["user"].clear
     sign_in(:user, @user)
+    redirect_to root_path
   end
 
   private
