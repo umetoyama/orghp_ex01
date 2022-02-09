@@ -1,0 +1,28 @@
+<%= render "shared/second-header" %>
+
+<div class="master">
+  <div class="member-block">
+    <div class="member-list">
+      <% @profiles.each do |member| %>
+        <div class="info-frame">
+          <div class="member-image-content">
+            <%= image_tag member.image.variant( resize: "50%"), class: "member-image" if member.image.attached? %>
+          </div>
+          <div>
+            <p class="text">
+              <%= member.user.name %>
+            </p>
+            <p class="text">
+              <%= member.position.name %>
+            </p>
+            <p class="text">
+              <%= member.about_me %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

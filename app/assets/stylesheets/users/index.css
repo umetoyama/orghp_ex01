@@ -1,0 +1,47 @@
+.master {
+  width: 100vw;
+  height: 100vh;
+}
+
+.member-block {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.member-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-left: 1px;
+  /* margin-top: 6px; */
+}
+
+.info-frame {
+  display: flex;
+  width: 32vw;
+  height: 46vh;
+  border-radius: 4px;
+  /* margin-bottom: 5px; */
+  background: linear-gradient(to left,transparent,black);
+}
+
+.member-image-content {
+  width: 210px;
+  height: auto;
+}
+
+.member-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.text {
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 20px;
+  line-height: 26px;
+  color: rgb(247, 253, 255);
+  font-size: 12px;
+} 

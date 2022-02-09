@@ -18,16 +18,16 @@
 
   <div class="field">
     <%= f.label :position %><br />
-    <%= f.collection_select(:position_id, Position.all, :id, :name, {}, {}) %>
+    <%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class: "form"}) %>
   </div>
 
   <div class="filed">
     <%= f.label :about_me %><br />
-    <%= f.text_area :about_me %>
+    <%= f.text_area :about_me, size: "50x15", class: "form" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "sign up" %>
+    <%= f.submit "sign up", class: "form" %>
   </div>
 <% end %>
 
