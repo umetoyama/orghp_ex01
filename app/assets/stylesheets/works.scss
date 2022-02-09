@@ -1,0 +1,30 @@
+// Place all the styles related to the works controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.works-master {
+  width: 100vw;
+  height: 100vw;
+}
+
+.movies-flame {
+  padding-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+// .movies-temp {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   gap: 2px;
+// }
+
+.movies {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  width: 100vw;
+}
+
+.movie {
+  width: 100%;
+}
