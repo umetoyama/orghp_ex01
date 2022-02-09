@@ -1,11 +1,15 @@
 <header class="fix-content">
   <div>
-    <h1 class="top">MEMBER</h1>
+    <% if current_page?(works_path) %>
+      <h1 class="top">WORK</h1>
+    <% else current_page?(users_path) %>
+      <h1 class="top">MEMBER</h1>
+    <% end %>
   </div>
     <nav class="nav">
     <ul class="list-first">
       <li><%= link_to 'top', root_path, class:"work-list" %></li>
-      <li><%= link_to 'work', "#", class:"work-list" %></li>
+      <li><%= link_to 'work', works_path, class:"work-list" %></li>
       <li><%= link_to 'member', users_path, class:"work-list" %></li>
       <li><%= link_to 'topic', "#", class:"work-list" %></li>
       <li><%= link_to 'company', "#", class:"work-list" %></li>
@@ -13,3 +17,13 @@
     </ul>
   </nav>
 </header>
+
+
+
+<%# 後に記述 %>
+    <%# <% else current_page?(topics_path) %>
+      <%# <h1 class="top">TOPIC</h1> %>
+    <%# <% else current_page?(companys_path) %>
+      <%# <h1 class="top">COMPANY</h1> %>
+    <%# <% else current_page?(contacts_path) %>
+      <%# <h1 class="top">CONTACT</h1> %>
