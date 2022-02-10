@@ -1,0 +1,17 @@
+<div class="base">
+  <div class="topic-form">
+    <%= form_with model: @topic, class:"f" do |t| %>
+    <div>
+      <%= t.label :title %>
+      <%= t.text_field :title, class:"title" %>
+    </div>
+    <div>
+      <%= t.label :content %>
+      <%= t.rich_text_area :content, class:"content" %>
+    </div>
+    <div>
+      <%= t.submit 'Send', class:"btn" %>
+      <%= link_to '戻る', "/topics", method: :get, class:"return" %>
+    <% end %>
+  </div>
+</div>
