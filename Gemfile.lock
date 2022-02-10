@@ -273,6 +273,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actiontext
   active_hash
   bootsnap (>= 1.4.2)
   byebug
