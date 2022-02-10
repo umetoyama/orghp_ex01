@@ -6,17 +6,22 @@ class TopicsController < ApplicationController
 
   def new
     @topic = Topic.new
+    # @user = User.find(curremt_user.id)
   end
 
   def create
-    @topic = Topic.create(topic_params)
-    redirect_to :new
+    @topic = Topic.new(topic_params)
+    if @topic.save
+      redirect_to action: :index
+    else
+      render :new
+    end
   end
 
   private
 
   def topic_params
-    params.require(:topic).permit(:tetle, :content).merge(user_id: current_user.id)
+    params.require(:topic).permit(:title).merge(user_id: current_user.id)
   end
 
   def move_to_root_path

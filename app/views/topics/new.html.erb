@@ -1,6 +1,6 @@
 <div class="base">
   <div class="topic-form">
-    <%= form_with model: @topic, class:"f" do |t| %>
+    <%= form_with model: @topic, local: true, class:"f" do |t| %>
     <div>
       <%= t.label :title %>
       <%= t.text_field :title, class:"title" %>
@@ -12,6 +12,7 @@
     <div>
       <%= t.submit 'Send', class:"btn" %>
       <%= link_to '戻る', "/topics", method: :get, class:"return" %>
+    </div>
     <% end %>
   </div>
 </div>

@@ -1,5 +1,17 @@
 <%= render "shared/second-header" %>
 
-
+<% if Topic.exists? %>
+<div>
+  <div>
+    <%= @topic.user_id.name %>
+  </div>
+  <div>
+  <%= @topic.title %>
+  </div>
+  <div>
+  <%= @topic.content %>
+  </div>
+</div>
+<% end %>
 
 <%= render "shared/footer" %>
