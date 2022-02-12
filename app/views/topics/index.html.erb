@@ -1,0 +1,32 @@
+<%= render "shared/second-header" %>
+
+<% if Topic.exists? %>
+<div class="topic-base">
+  <% @topics.each do |topics| %>
+  <div class="topics">
+    <div class="topic-top">
+      <div class="topic-title">
+        <div class="line">
+          <%= topics.title %>
+        </div>
+        <div class="block"></div>
+      </div>
+      <div class="name-date">
+        <div cass="b"></div>
+        <div class="name">
+          <span>
+            <%= topics.user.name %>
+          </span>
+          <span>
+            <%= topics.created_at.strftime('%y/%m/%d') %>
+          </span>
+        </div>
+      </div>
+    </div>
+    <%= topics.content %>
+  </div>  
+  <% end %>
+</div>
+<% end %>
+
+<%= render "shared/footer" %>
