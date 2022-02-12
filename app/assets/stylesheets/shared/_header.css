@@ -3,13 +3,9 @@ header {
   font-family: balboa-plus-fill, sans-serif;
   font-weight: 400;
   font-style: normal;
-  /* background-color: black; */
+  position: relative;
+  z-index: 100;
 }
-/* 
-.main-header {
-  height: 10vh;
-  width: 100vw;
-} */
 
 .temporary_title {
   height: 10vh;

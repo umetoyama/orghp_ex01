@@ -3,6 +3,7 @@
   height: 10vh;
   width: 100vw;
   color: white;
+  position: fixed;
 }
 
 .top {
