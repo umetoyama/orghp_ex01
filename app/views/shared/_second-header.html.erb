@@ -6,9 +6,7 @@
       <h1 class="top">MEMBER</h1>
     <% elsif current_page?(topics_path) %>
       <h1 class="top">TOPIC</h1>
-    <% else current_page?(topics_path) %>
-      <h1 class="top">TOPIC</h1>
-    <% else current_page?(companys_path) %>
+    <% elsif current_page?(companies_path) %>
       <h1 class="top">COMPANY</h1>
     <% end %>
   </div>
