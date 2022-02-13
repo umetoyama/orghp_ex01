@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   resources :users, only:[:index]
   resources :works, only:[:index]
   resources :topics, only:[:index, :new, :create]
+  resources :companies, only:[:index]
   
 end
