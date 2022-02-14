@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
       ContactMailer.contact_mail(@contact).deliver
       redirect_to new_contact_path
     else
-      render: :new
+      render :new
     end
   end
 
