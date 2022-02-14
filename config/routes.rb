@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   resources :works, only:[:index]
   resources :topics, only:[:index, :new, :create]
   resources :companies, only:[:index]
+  resources :contacts, only:[:new, :create]
   
 end

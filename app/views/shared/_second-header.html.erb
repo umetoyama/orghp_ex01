@@ -8,6 +8,8 @@
       <h1 class="top">TOPIC</h1>
     <% elsif current_page?(companies_path) %>
       <h1 class="top">COMPANY</h1>
+    <% else current_page?(new_contact_path) %>
+      <h1 class="top">CONTACT</h1>
     <% end %>
   </div>
     <nav class="nav">
@@ -17,13 +19,7 @@
       <li><%= link_to 'member', users_path, class:"work-list" %></li>
       <li><%= link_to 'topic', topics_path, class:"work-list" %></li>
       <li><%= link_to 'company', companies_path, class:"work-list" %></li>
-      <li><%= link_to 'contact', "#", class:"work-list" %></li>
+      <li><%= link_to 'contact', new_contact_path, class:"work-list" %></li>
     </ul>
   </nav>
 </header>
-
-
-
-<%# 後に記述 %>
-    <%# <% else current_page?(contacts_path) %>
-      <%# <h1 class="top">CONTACT</h1> %>
