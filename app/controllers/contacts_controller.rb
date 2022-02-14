@@ -5,7 +5,8 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new
+    @contact = Contact.new(contact_params)
+    binding.pry
     if @contact.save
       ContactMailer.contact_mail(@contact).deliver
       redirect_to new_contact_path
