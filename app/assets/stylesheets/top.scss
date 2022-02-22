@@ -2,7 +2,69 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.heading {
-  text-align: center;
-  margin-top: 35vh;
+
+// レスポンシブ対応記述-----------------------
+@media (max-width: 1024px) {
+
+
+
+}
+// ---------------------------------------
+
+
+.top-base {
+  width: 100vw;
+  height: 370vh;
+}
+
+.video {
+  width: 100vw;
+  height: 370vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.film {
+  z-index: -10;
+  opacity: 0.2;
+  height: 370vh;
+  // width: 976px;
+  object-fit: cover;
+}
+
+.factor {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  width: 80vw;
+  height: 350vh;
+}
+
+.size {
+  // width: 80vw;
+  height: 80vh;
+  margin-bottom: 10vh;
+}
+
+.first {
+  background-color: hotpink;
+}
+
+.w {
+  background-color: rgb(46, 2, 240);
+}
+
+.m {
+  background-color: hotpink;
+
+}
+
+.t {
+  background-color: hotpink;
+
+}
+
+.c {
+  background-color: hotpink;
+
 }
