@@ -3,21 +3,31 @@ header {
   font-family: balboa-plus-fill, sans-serif;
   font-weight: 400;
   font-style: normal;
-  position: relative;
+  position: fixed;
   z-index: 100;
 }
 
 .temporary_title {
-  height: 10vh;
+  height: 12vh;
   width: 100vw;
+  position: relative;
+  background-color: rgb(0, 0, 0);
 }
 
+/* （下）この要素いらないかも？ */
 .company {
-  font-size: 36px;
-  line-height: 10vh;
-  font-size: 44px;
-  background-color: rgb(0, 0, 0);
-  padding-left: 20px;
+  width: 16vw;
+  height: 9vh;
+  position: relative;
+  left: 42vw;
+}
+/* （上）この要素いらないかも？ */
+
+.__logo {
+  position: absolute;
+  top: -1vh;
+  height: 14vh;
+  width: 16vw;
 }
 
 .main-header ul li {

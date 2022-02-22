@@ -4,27 +4,172 @@
 
 .works-master {
   width: 100vw;
-  height: 100vw;
-}
-
-.movies-flame {
+  // height: 124vh;
+  height: 300vh;
   padding-top: 10vh;
   margin-bottom: 10vh;
 }
 
-// .movies-temp {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   gap: 2px;
-// }
-
-.movies {
+.movie-label {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1px;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
   width: 100vw;
+  padding: calc(12vh + 6px) 2px calc(12vh - 2px) 2px;
 }
 
-.movie {
+.pic {
   width: 100%;
+  margin-top: -4px;
+  filter: grayscale(100%);
+  
+  &:hover {
+    filter: grayscale(0%);
+  }
+
+}
+
+// モーダルウィンドウ----------------
+// modal-〇〇の部分をクリックしたclass名という記述にできれば短くできるはず
+// br
+.modal-br input {
+  display: none;
+}
+
+.modal-br input+div {
+  display: none;
+}
+
+.modal-br input:checked+div {
+  display: block;
+}
+
+// ur
+.modal-ur input {
+  display: none;
+}
+
+.modal-ur input+div {
+  display: none;
+}
+
+.modal-ur input:checked+div {
+  display: block;
+}
+
+// do
+.modal-do input {
+  display: none;
+}
+
+.modal-do input+div {
+  display: none;
+}
+
+.modal-do input:checked+div {
+  display: block;
+}
+
+// on
+.modal-on input {
+  display: none;
+}
+
+.modal-on input+div {
+  display: none;
+}
+
+.modal-on input:checked+div {
+  display: block;
+}
+
+// sa
+.modal-sa input {
+  display: none;
+}
+
+.modal-sa input+div {
+  display: none;
+}
+
+.modal-sa input:checked+div {
+  display: block;
+}
+
+// se
+.modal-se input {
+  display: none;
+}
+
+.modal-se input+div {
+  display: none;
+}
+
+.modal-se input:checked+div {
+  display: block;
+}
+
+// itu
+.modal-itu input {
+  display: none;
+}
+
+.modal-itu input+div {
+  display: none;
+}
+
+.modal-itu input:checked+div {
+  display: block;
+}
+
+// zen
+.modal-zen input {
+  display: none;
+}
+
+.modal-zen input+div {
+  display: none;
+}
+
+.modal-zen input:checked+div {
+  display: block;
+}
+// ----------------------------------
+
+
+.button {
+  position: absolute;
+  top: 12vh;
+  left: 3vw;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  height: 2vh;
+  width: 2vh;
+  border: solid 1px #000;
+  text-align: center;
+}
+
+.back {
+  background-color: rgba($color: #ffff, $alpha: 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 200vh;
+}
+
+.mv {
+  position: fixed;
+  top: 14vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 20;
+  transform: translate(0, 0) scale(1);
+  transition: 0.2s;
+  width: 90vw;
 }
