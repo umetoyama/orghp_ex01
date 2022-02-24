@@ -13,13 +13,13 @@
 
 
 .top-base {
-  width: 100vw;
-  height: 370vh;
+  // width: 100vw;
+  height: 452vh;
 }
 
-.video {
-  width: 100vw;
-  height: 370vh;
+.top-main {
+  // width: 100vw;
+  height: 452vh;
   overflow: hidden;
   position: relative;
 }
@@ -27,36 +27,201 @@
 .film {
   z-index: -10;
   opacity: 0.2;
-  height: 370vh;
+  height: 452vh;
   // width: 976px;
   object-fit: cover;
 }
 
 .factor {
   position: absolute;
-  top: 10vh;
-  left: 10vw;
-  width: 80vw;
-  height: 350vh;
+  top: 12vh;
+  width: 100vw;
+  height: 452vh;
+  // background-color: azure;
+  // margin: 0px auto;
+  // display: table;
 }
 
-.size {
-  // width: 80vw;
-  height: 80vh;
-  margin-bottom: 10vh;
+.top-back {
+  background-color: aliceblue;
+  height: 452vh;
+  width: 55vw;
+  margin: 0px auto;
 }
+
+// 横スクロール画面設定記述 ------------------------------
 
 .first {
-  background-color: hotpink;
+  position: relative;
+  // object-fit: cover;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  // height: 76vh;
+  max-width: 55vw;
+  margin: 0px auto 12vh auto;
+  display: flex;
+}
+
+.picture {
+  scroll-snap-align: center;
+  width: 55vw;
+  height: 76vh;
+  flex: 0 0 55vw;
+}
+
+.one {
+  background-image: url("image/c32c964a-e63a-4da0-a659-395f48950f67.jpg");
+  background-size: 140%;
+}
+
+.one::before {
+  content: '';
+  background: inherit;
+  filter: blur(6px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.one::after {
+  content: '';
+  position: absolute;
+  top: 4vh;
+  left: 3vw;
+  right: 3vw;
+  bottom: 4vh;
+  background-image: url("image/c32c964a-e63a-4da0-a659-395f48950f67.jpg");
+  background-size: 100%;
+  z-index: 2;
+  background-position: center;
+}
+
+.top-text {
+  color: aliceblue;
+  background-color: #000;
+  font-size: 12px;
+  display: inline-block;
+  padding: 0 6px;
+  // letter-spacing: normal;
+  // font-feature-settings: "palt" 1;
+}
+
+.top-text-layout {
+  position: absolute;
+  top: 23vh;
+  left: 13vw;
+  z-index: 3;
+  font-family: "A-OTF A1明朝 Std";
+}
+
+.two {
+  background-image: url("image/d75006ee-6b87-4d95-b460-55ad070aa9fd.jpg");
+  background-size: 160%;
+  position: relative;
+}
+
+.two::before {
+  content: '';
+  background: inherit;
+  filter: blur(6px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.two::after {
+  content: '';
+  position: absolute;
+  top: 4vh;
+  left: 3vw;
+  right: 3vw;
+  bottom: 4vh;
+  background-image: url("image/d75006ee-6b87-4d95-b460-55ad070aa9fd.jpg");
+  background-size: 100%;
+  z-index: 2;
+  background-position: center;
+}
+
+.three {
+  background-image: url("image/752bb9cf-529d-45f9-ba7b-300ce9480012.jpg");
+  background-size: 140%;
+  position: relative;
+}
+
+.three::before {
+  content: '';
+  background: inherit;
+  filter: blur(6px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.three::after {
+  content: '';
+  position: absolute;
+  top: 4vh;
+  left: 3vw;
+  right: 3vw;
+  bottom: 4vh;
+  background-image: url("image/752bb9cf-529d-45f9-ba7b-300ce9480012.jpg");
+  background-size: 100%;
+  z-index: 2;
+  background-position: center;
+}
+
+.four {
+  background-image: url("image/cat-gdd55f827d_1280.jpg");
+  background-size: 160%;
+  background-position: center;
+  position: relative;
+}
+
+
+.four::before {
+  content: '';
+  background: inherit;
+  filter: blur(6px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.four::after {
+  content: '';
+  position: absolute;
+  top: 4vh;
+  left: 3vw;
+  right: 3vw;
+  bottom: 4vh;
+  background-image: url("image/cat-gdd55f827d_1280.jpg");
+  background-size: 100%;
+  z-index: 2;
+  background-position: center;
+}
+
+// ---------------------------------------------------
+
+.size {
+  width: 55vw;
+  height: 76vh;
+  margin: 0px auto 12vh auto;
 }
 
 .w {
   background-color: rgb(46, 2, 240);
-}
-
-.m {
-  background-color: hotpink;
-
 }
 
 .t {
@@ -64,7 +229,11 @@
 
 }
 
-.c {
+.m {
   background-color: hotpink;
 
+}
+
+.c {
+  background-color: rgb(94, 255, 0);
 }

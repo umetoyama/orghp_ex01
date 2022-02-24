@@ -34,9 +34,9 @@ header {
   display: none;
 }
 
-.main-header:hover ul li {
+/* .main-header:hover ul li {
   display:block;
-}
+} */
 
 .nav {
   height: 5vh;
