@@ -4,7 +4,7 @@
 
 
 // レスポンシブ対応記述-----------------------
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
 
 
 
@@ -43,7 +43,7 @@
 }
 
 .top-back {
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   height: 452vh;
   width: 55vw;
   margin: 0px auto;
@@ -60,6 +60,7 @@
   max-width: 55vw;
   margin: 0px auto 12vh auto;
   display: flex;
+  border-bottom: 2px solid rgb(209, 172, 51);
 }
 
 .picture {
@@ -100,7 +101,7 @@
 }
 
 .top-text {
-  color: aliceblue;
+  color: rgb(255, 255, 255);
   background-color: #000;
   font-size: 12px;
   display: inline-block;
@@ -119,8 +120,9 @@
 
 .two {
   background-image: url("image/d75006ee-6b87-4d95-b460-55ad070aa9fd.jpg");
-  background-size: 160%;
+  background-size: 200%;
   position: relative;
+  background-position: center;
 }
 
 .two::before {
@@ -181,7 +183,7 @@
 
 .four {
   background-image: url("image/cat-gdd55f827d_1280.jpg");
-  background-size: 160%;
+  background-size: 200%;
   background-position: center;
   position: relative;
 }
@@ -221,7 +223,106 @@
 }
 
 .w {
-  background-color: rgb(46, 2, 240);
+  // background-color: rgb(46, 2, 240);
+  position: relative;
+  border: 1px solid rgb(209, 172, 51);
+}
+
+.w-flame {
+  // position:relative;
+  width: 55vw;
+  height: 76vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-headline {
+  // position: absolute;
+  // left: 10vw;
+  height: 26vh;
+  width: 14vw;
+  font-size: 26px;
+  font-family: "ヒラギノ角ゴ Pro";
+  color: rgb(209, 172, 51);
+  text-align: center;
+  line-height: 26vh;
+  font-weight: 100;
+  transform: scale(1, 0.7);
+}
+
+.work-headline:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.work-ex {
+  position: relative;
+  // top: 2vh;
+  // left: 10vw;
+  height: 100%;
+  padding: calc((76vh - 55vh) / 2) 0;
+  margin-right: 1vw;
+  width: calc(55vw - 14vw);
+  overflow: auto;
+  // flex: 0 0 300px;
+}
+
+.ex {
+  height: 55vh;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 6px 0 20px rgb(54, 54, 54);
+}
+
+.a {
+  position: absolute;
+  left: 0;
+  z-index: 5;
+}
+
+.b {
+  position: absolute;
+  left: 9vw;
+  z-index: 4;
+}
+
+.c {
+  position: absolute;
+  left: 18vw;
+  z-index: 3;
+}
+
+.d {
+  position: absolute;
+  left: 27vw;
+  z-index: 2;
+}
+
+.e {
+  position: absolute;
+  left: 36vw;
+  z-index: 1;
+}
+
+.ex-last {
+  background: linear-gradient(to left, #fff, 80%, transparent);
+  height: 75vh;
+  width: 100px;
+  position: absolute;
+  right: 2px;
+  z-index: 6;
+  // box-shadow: inset 0 10 10px 10px #fff;
+}
+
+.w-link {
+  color: rgb(209, 172, 51);
+  font-size: 12px;
+  position: absolute;
+  right: 6px;
+  bottom: 2px;
+  text-decoration: none;
 }
 
 .t {
@@ -234,6 +335,6 @@
 
 }
 
-.c {
+.com {
   background-color: rgb(94, 255, 0);
 }
