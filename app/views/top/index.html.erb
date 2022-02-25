@@ -24,7 +24,7 @@
         </div>
         <div class="w size">
           <div class="w-flame">
-            <h3 class="work-headline">work</h3>
+            <h3 class="work-headline">Work</h3>
             <div class="work-ex">
               <img src="image/br_スクリーンショット 2022-02-20 14.57.50.png" class="ex a">
               <img src="image/br_スクリーンショット 2022-02-20 14.57.50.png" class="ex b">
@@ -38,6 +38,31 @@
           </div>
         </div>
         <div class="t size">
+          <div class="t-flame">
+            <h3 class="topic-headline">Topic</h3>
+            <% if Topic.exists? %>
+            <div class="topic-ex">
+              <% @topics_new.each do |topic| %>
+              <div class="t--one">
+                <p>
+                <span class="t--t">
+                  <%= topic.title %>
+                </span>
+                <span class="t--n">
+                  <%= topic.user.name %>
+                </span>
+                </p>
+                <span class="t--p">
+                  <%= image_tag topic.content.embeds[0].variant( resize: "490"), class: "topic-image" %>
+                </span>
+              </div>
+              <% end %>
+            </div>
+            <% end %>
+          </div>
+          <div class="ex-last">
+            <%= link_to 'read more...', topics_path, class:"w-link" %>
+          </div>
         </div>
         <div class="m size">
         </div>
