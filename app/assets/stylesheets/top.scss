@@ -330,14 +330,6 @@
   text-decoration-thickness: 1px;
 }
 
-// 
-// .size {
-//   width: 55vw;
-//   height: 76vh;
-//   margin: 0px auto 12vh auto;
-// }
-// 
-
 .t {
   position: relative;
   border: 1px solid rgb(209, 172, 51);
@@ -479,7 +471,7 @@
   margin: calc((76vh - 26vh) / 2) 0px;
   position: sticky;
   top: 0;
-  left: 0;
+  left: 1vw;
 }
 
 .member-ex {
@@ -564,5 +556,63 @@
 }
 
 .com {
-  background-color: rgb(94, 255, 0);
+  border: 1px solid rgb(209, 172, 51);
+  display: flex;
+  width: 55vw;
+  height: calc(76vh - 3px);
+  // margin: 0px auto 12vh auto;
+}
+
+.com-headline {
+  height: 26vh;
+  width: 14vw;
+  font-size: 26px;
+  font-family: "ヒラギノ角ゴ Pro";
+  color: rgb(209, 172, 51);
+  text-align: center;
+  line-height: 26vh;
+  font-weight: 100;
+  transform: scale(1, 0.7);
+  margin: calc((76vh - 26vh) / 2) 0px 0 2vw;
+  // position: sticky;
+  // top: 0;
+  // left: 0;
+}
+
+.logos {
+  height: 26vh;
+  width: calc(55vw - 14vw - 2vw);
+  margin: auto 0 auto 0;
+  padding-top: 4vh;
+}
+
+.com-logo {
+  height: 12vh;
+  display: block;
+  margin: 0 auto -1vw auto;
+}
+
+.com-logo:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.sns-logo {
+  width: calc(4vw + 4vw + 4px);
+  margin: 0 auto;
+}
+
+.sns-logo p {
+  font-size: 8px;
+  color: gray;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.sns-t {
+  width: 4vh;
+  margin-right: 4px;
+}
+
+.sns-i {
+  width: 4vh;
 }

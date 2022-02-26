@@ -89,7 +89,22 @@
             <%= link_to 'read more...', users_path, class:"w-link" %>
           </div>
         </div>
-        <div class="com size">
+        <div class="com">
+          <h3 class="com-headline">Company</h3>
+          <div class="logos">
+            <%= link_to (companies_path) do %>
+              <img src="image/00_logo_two.png" class="com-logo">
+            <% end %>
+            <div class="sns-logo">
+              <p>-- sns --</p>
+              <%= link_to '#' do %>
+                <img src="image/Twitter social icons - rounded square - blue.png" class="sns-t">
+              <% end %>
+              <%= link_to '#' do %>
+                <img src="image/Instagram_Glyph_Gradient_RGB.png" class="sns-i">
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
