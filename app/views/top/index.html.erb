@@ -44,14 +44,12 @@
             <div class="topic-ex">
               <% @topics_new.each do |topic| %>
               <div class="t--one">
-                <p>
                 <span class="t--t">
                   <%= topic.title %>
                 </span>
                 <span class="t--n">
                   <%= topic.user.name %>
                 </span>
-                </p>
                 <span class="t--p">
                   <%= image_tag topic.content.embeds[0].variant( resize: "490"), class: "topic-image" %>
                 </span>
@@ -65,6 +63,31 @@
           </div>
         </div>
         <div class="m size">
+          <div class="m-flame">
+            <h3 class="member-headline">Member</h3>
+            <% if User.exists? %>
+            <div class="member-ex">
+              <% @profile_select.each do |member| %>
+              <div class="m--one">
+                <div class="m--pic">
+                  <%= image_tag member.image.variant( resize: "50%"), class: "member-image" %>
+                </div>
+                <span class="m--text">
+                  <span class="m--pos">
+                    <%= member.position.name %>
+                  </span>
+                  <span class="m--n">
+                    <%= member.user.name %>
+                  </span>
+                </span>
+              </div>
+              <% end %>
+            </div>
+            <% end %>
+          </div>
+          <div class="ex-last">
+            <%= link_to 'read more...', users_path, class:"w-link" %>
+          </div>
         </div>
         <div class="com size">
         </div>

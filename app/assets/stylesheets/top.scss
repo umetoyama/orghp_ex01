@@ -427,10 +427,6 @@
   overflow: hidden;
 }
 
-// .t--one p {
-//   display: block;
-// }
-
 .t--t {
   border-bottom: solid 1px rgba(83, 83, 83, 0.4);
   margin: 4px 0 8px 0;
@@ -450,12 +446,121 @@
 
 .topic-image {
   height: 46vh;
-  // width: 21vw;
   object-fit: contain;
 }
 
 .m {
-  background-color: hotpink;
+  position: relative;
+  border: 1px solid rgb(209, 172, 51);
+  display: flex;
+}
+
+
+.m-flame {
+  position: relative;
+  width: 55vw;
+  height: 76vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  margin-right: 4px;
+}
+
+.member-headline {
+  height: 26vh;
+  width: 14vw;
+  font-size: 26px;
+  font-family: "ヒラギノ角ゴ Pro";
+  color: rgb(209, 172, 51);
+  text-align: center;
+  line-height: 26vh;
+  font-weight: 100;
+  transform: scale(1, 0.7);
+  margin: calc((76vh - 26vh) / 2) 0px;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.member-ex {
+  position: relative;
+  top: 0;
+  left: 14vw;
+  display: flex;
+  // height: 100%;
+  // width: calc(55vw - 14vw);
+  padding: calc((76vh - 55vh) / 2) 0;
+}
+
+.member-ex div:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 9vw;
+  z-index: 4;
+  margin: calc((76vh - 55vh) / 2) 0;
+}
+
+.member-ex div:nth-of-type(3) {
+  position: absolute;
+  top: 0;
+  left: 18vw;
+  z-index: 3;
+  margin: calc((76vh - 55vh) / 2) 0;
+}
+
+.member-ex div:nth-of-type(4) {
+  position: absolute;
+  top: 0;
+  left: 27vw;
+  z-index: 2;
+  margin: calc((76vh - 55vh) / 2) 0;
+}
+
+.member-ex div:nth-of-type(5) {
+  position: absolute;
+  top: 0;
+  left: 36vw;
+  z-index: 1;
+  margin: calc((76vh - 55vh) / 2) 0;
+}
+
+.m--one {
+  height: 55vh;
+  width: 21vw;
+  border-radius: 6px;
+  box-shadow: 6px 0 20px rgb(54, 54, 54);
+  // background-color:rgba(255,255,255,0.5);
+  // background-blend-mode:lighten;
+  background-color: #fff;
+  border: solid 1px darkgray;
+  padding: 10px;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.m--pic {
+  height: 36vh;
+  width: 100%;
+}
+
+.m--text {
+  font-family: '851マカポップ';
+  color: red;
+  font-size: 28px;
+  // font-weight: 900;
+  // text-align: center;
+}
+
+.m--pos {
+  display: block;
+  transform: rotate(-6deg);
+  margin: calc(1vh + 6px) 0 0 2vh;
+}
+
+.m--n {
+  display: block;
+  transform: rotate(-6deg);
+  margin: 1vh 0 0 2vh;
 }
 
 .com {
