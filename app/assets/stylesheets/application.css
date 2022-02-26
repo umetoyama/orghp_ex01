@@ -17,10 +17,10 @@
  body {
    /* デフォルトフォントサイズを10pxに設定 */
    font-size: 62.5%;
-   background-image: url('image/22724258_m.jpg');
+   /* background-image: url('image/22724258_m.jpg');
    background-repeat: repeat;
    background-color:rgba(255,255,255,0.5);
-   background-blend-mode:lighten;
+   background-blend-mode:lighten; */
  }
 
  /* * {
