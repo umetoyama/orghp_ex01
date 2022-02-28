@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   before_action :move_to_root_path, only: [:new]
 
   def index
-    @topics = Topic.order(id: :ASC)
+    @topics = Topic.order(id: :DESC)
     # @user = @tpics.user_id
   end
 
