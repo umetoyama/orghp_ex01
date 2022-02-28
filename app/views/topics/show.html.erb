@@ -1,0 +1,31 @@
+<%= render "shared/second-header" %>
+
+<div class="t-s-base">
+  <div class="t-s-flame">
+    <div class="topics">
+      <div class="topic-top">
+        <div class="topic-title">
+          <div class="line">
+            <%= @topic.title %>
+          </div>
+          <div class="block"></div>
+        </div>
+        <div class="name-date">
+          <div class="name">
+            <span>
+              <%= @topic.user.name %>
+            </span>
+            <span>
+              <%= @topic.created_at.strftime('%y/%m/%d') %>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="t-content">
+        <%= @topic.content %>
+      </div>
+    </div>  
+  </div>
+</div>
+
+<%= render "shared/footer" %>

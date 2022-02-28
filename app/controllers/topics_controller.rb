@@ -3,7 +3,6 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.order(id: :DESC)
-    # @user = @tpics.user_id
   end
 
   def new
@@ -17,6 +16,12 @@ class TopicsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @topic = Topic.find(params[:id])
+    @comments = @topic.comments.includes(:user)
+    @comment = Comment.new
   end
 
   private
