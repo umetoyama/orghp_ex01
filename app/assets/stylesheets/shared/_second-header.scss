@@ -1,0 +1,111 @@
+.fix-content {
+  background-color: rgb(0, 0, 0);
+  height: 12vh;
+  width: 100vw;
+  color: rgb(209, 172, 51);
+  position: fixed;
+  font-family: "ヒラギノ角ゴ Pro";
+}
+
+.top {
+  text-align: center;
+  line-height: 12vh;
+  font-size: 42px;
+  font-weight: 100;
+  transform: scale(1, 0.5);
+}
+
+.nav {
+  position: relative;
+  top: calc((100vh - 24vh) - 6vh);
+  left: 50vw;
+}
+
+#subnav {
+  display: none;
+}
+
+#subnav:checked ~ ul {
+  display: flex;
+  animation: fadeIn 0.5s ease;
+}
+
+.subnav {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.subnav-btn {
+  position: relative;
+
+  &::before{
+    content:'';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    box-sizing: border-box;
+    border: 8px solid transparent;
+    border-left: 14px solid rgb(196, 196, 196);
+    z-index: 2;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -13px;
+    margin: auto;
+    content: '';
+    width: 36px;
+    height: 36px;
+    // border: 1px solid #555;
+    border-radius: 18px;
+    background: rgba(65, 65, 65, 0.8);
+    z-index: 1;
+  }
+}
+
+.subnav-list {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: calc(-4px - 1vh - 1px);
+  left: 10px;
+  width: calc(24vw + 4px + 10px);
+  height: 3vh;
+  line-height: 3vh;
+  padding-left: 10px;
+  background: linear-gradient(to right,transparent,rgba(0, 0, 0, 0.4) 6%,rgba(0, 0, 0, 0.6) 70%);
+  // transform: scale(1, 0.8);
+}
+
+.sub-list {
+  color: rgb(209, 172, 51);
+  font-family: "ヒラギノ角ゴ Pro";
+  font-size: 8px;
+  font-weight: 100;
+  margin-left: 8px;
+  text-decoration: none;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+
+// アニメーション設定--------------
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+// -----------------------ーーーー
