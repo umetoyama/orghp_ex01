@@ -1,0 +1,20 @@
+<div class="e-base">
+  <div class="e-topic-form">
+    <%= form_with model: @topic, local: true, class:"e-f" do |t| %>
+      <span id="e-f">
+        <div>
+          <%= t.label :title %>
+          <%= t.text_field :title, class:"e-title" %>
+        </div>
+        <div>
+          <%= t.label :content %>
+          <%= t.rich_text_area :content, class:"e-content" %>
+        </div>
+        <div>
+          <%= t.submit 'update', class:"e-btn" %>
+          <%= link_to '戻る', topic_path(@topic.id), class:"e-return" %>
+        </div>
+      </span>
+    <% end %>
+  </div>
+</div>
