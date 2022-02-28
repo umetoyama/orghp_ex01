@@ -2,7 +2,7 @@
 
 <div class="t-s-base">
   <div class="t-s-flame">
-    <div class="topics">
+    <div class="topics s-size">
       <div class="topic-top">
         <div class="topic-title">
           <div class="line">
@@ -24,7 +24,28 @@
       <div class="t-content">
         <%= @topic.content %>
       </div>
-    </div>  
+    </div>
+
+    <div class="t-s-comments">
+      <div class="t-s-comment-form">
+        <% if user_signed_in? %>
+          <%= form_with model: [@topic, @comment], id: "comment-form" do |f| %>
+            <%= f.text_area :text, class:"comment-text" %>
+            <%= f.submit "コメントする", class:"comment-submit" %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="t-s-comment">
+        <h4>コメント一覧 </h4>
+        <% @topic.comments.each do |comment| %>
+        <div class="comment">
+          <p class="user-info"><%= comment.user.name %></p>
+          <p class="comment-text"><%= comment.text %></p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
   </div>
 </div>
 
