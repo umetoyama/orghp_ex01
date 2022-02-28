@@ -9,13 +9,13 @@
             <%= image_tag member.image.variant( resize: "50%"), class: "member-image" if member.image.attached? %>
           </div>
           <div>
-            <p class="text">
+            <p class="profile-text">
               <%= member.user.name %>
             </p>
-            <p class="text">
+            <p class="profile-text">
               <%= member.position.name %>
             </p>
-            <p class="text">
+            <p class="profile-text">
               <%= member.about_me %>
             </p>
           </div>

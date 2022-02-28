@@ -1,23 +1,115 @@
 <%= render "shared/header" %>
 
 <div class="top-base">
-  <div class="video">
+  <div class="top-main">
     <%= video_tag("/videos/16mm_Scratched_lite.mp4",
       loop: :true,
       autoplay: :true,
       muted: :true,
       playsinline: :true,
       class: "film") %>
+
     <div class="factor">
-      <div class="first size">
-      </div>
-      <div class="w size">
-      </div>
-      <div class="t size">
-      </div>
-      <div class="m size">
-      </div>
-      <div claa="c size">
+      <div class="factor-back">
+        <div class="first">
+          <div class="picture one">
+            <div class="top-text-layout">
+              <p class="top-text">映像好きが</p><br>
+              <p class="top-text">すべての人に贈る</p><br>
+              <p class="top-text">映像制作</p>
+            </div>
+          </div>
+          <div class="picture two"></div>
+          <div class="picture three"></div>
+          <div class="picture four"></div>
+        </div>
+
+        <div class="w size">
+          <div class="w-flame">
+            <h3 class="work-headline">Work</h3>
+            <div class="work-ex">
+              <img src="image/br_スクリーンショット 2022-02-20 14.57.50.png" class="ex a">
+              <img src="image/do_スクリーンショット 2022-02-20 15.00.49.png" class="ex b">
+              <img src="image/on_スクリーンショット 2022-02-20 15.08.00.png" class="ex c">
+            </div>
+          </div>
+          <div class="ex-last">
+            <%= link_to 'read more...', works_path, class:"w-link" %>
+          </div>
+        </div>
+
+        <div class="t size">
+          <div class="t-flame">
+            <h3 class="topic-headline">Topic</h3>
+            <% if Topic.exists? %>
+            <div class="topic-ex">
+              <% @topics_new.each do |topic| %>
+              <div class="t--one">
+                <span class="t--t">
+                  <%= topic.title %>
+                </span>
+                <span class="t--n">
+                  <%= topic.user.name %>
+                </span>
+                <span class="t--p">
+                  <%= image_tag topic.content.embeds[0].variant( resize: "490"), class: "topic-image" %>
+                </span>
+              </div>
+              <% end %>
+            </div>
+            <% end %>
+          </div>
+          <div class="ex-last">
+            <%= link_to 'read more...', topics_path, class:"w-link" %>
+          </div>
+        </div>
+
+        <div class="m size">
+          <div class="m-flame">
+            <h3 class="member-headline">Member</h3>
+            <% if User.exists? %>
+            <div class="member-ex">
+              <% @profile_select.each do |member| %>
+              <div class="m--one">
+                <div class="m--pic">
+                  <%= image_tag member.image.variant( resize: "50%"), class: "member-image" %>
+                </div>
+                <span class="m--text">
+                  <span class="m--pos">
+                    <%= member.position.name %>
+                  </span>
+                  <span class="m--n">
+                    <%= member.user.name %>
+                  </span>
+                </span>
+              </div>
+              <% end %>
+            </div>
+            <% end %>
+          </div>
+          <div class="ex-last">
+            <%= link_to 'read more...', users_path, class:"w-link" %>
+          </div>
+        </div>
+
+        <div class="com">
+          <h3 class="com-headline">Company</h3>
+          <div class="logos">
+            <%= link_to (companies_path) do %>
+              <img src="image/00_logo_two.png" class="com-logo">
+            <% end %>
+            <div class="sns-logo">
+              <p>-- sns --</p>
+              <%= link_to '#' do %>
+                <img src="image/Twitter social icons - rounded square - blue.png" class="sns-t">
+              <% end %>
+              <%= link_to '#' do %>
+                <img src="image/Instagram_Glyph_Gradient_RGB.png" class="sns-i">
+              <% end %>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
