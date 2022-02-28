@@ -22,37 +22,3 @@ header {
   left: 42vw;
 }
 /* （上）この要素いらないかも？ */
-
-.__logo {
-  position: absolute;
-  top: -1vh;
-  height: 14vh;
-  width: 16vw;
-}
-
-.main-header ul li {
-  display: none;
-}
-
-/* .main-header:hover ul li {
-  display:block;
-} */
-
-.nav {
-  height: 5vh;
-  line-height: 5vh;
-}
-
-.list-first {
-  display: flex;
-  list-style: none;
-  text-align: center;
-  justify-content: space-around;
-  background-color: black;
-}
-
-.work-list {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 18px;
-}
