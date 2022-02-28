@@ -37,10 +37,10 @@
       </div>
       <div class="t-s-comment">
         <h4>コメント一覧 </h4>
-        <% @topic.comments.each do |comment| %>
-        <div class="comment">
+        <% @comments.each do |comment| %>
+        <div class="comment" id="comment-f">
           <p class="user-info"><%= comment.user.name %></p>
-          <p class="comment-text"><%= comment.text %></p>
+          <p class="text"><%= comment.text %></p>
         </div>
         <% end %>
       </div>

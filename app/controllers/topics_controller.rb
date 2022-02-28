@@ -20,7 +20,7 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
-    @comments = @topic.comments.includes(:user)
+    @comments = @topic.comments.includes(:user).order(id: :DESC)
     @comment = Comment.new
   end
 

@@ -64,10 +64,11 @@
   font-size: 11px;
 }
 
+
 // --------Show-----------------------------
 
 .t-s-base {
-  height: 200vh;
+  height: 180vh;
   width: 100vw;
   padding-top: calc(12vh + 2px);
   background-image: url('image/22724258_m.jpg');
@@ -94,6 +95,7 @@
   background-blend-mode:lighten;
   border: solid 0.5px darkgray;
   padding: 15px;
+  height: 80vh;
 }
 
 .t-s-comment-form {
@@ -131,7 +133,9 @@
 }
 
 .comment {
-
+  margin-top: 8px;
+  background-color: rgba(231, 119, 156, 0.521);
+  padding: 6px;
 }
 
 .user-info {
@@ -139,5 +143,5 @@
 }
 
 .comment-text {
-  
+
 }
