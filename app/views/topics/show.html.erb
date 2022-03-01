@@ -2,13 +2,12 @@
 
 <div class="t-s-base">
   <div class="t-s-flame">
-    <div class="topics s-size">
+    <article class="topics s-size">
       <div class="topic-top">
         <div class="topic-title">
           <div class="line">
             <%= @topic.title %>
           </div>
-          <div class="block"></div>
         </div>
         <div class="name-date">
           <div class="name">
@@ -24,27 +23,33 @@
       <div class="t-content">
         <%= @topic.content %>
       </div>
-    </div>
+      <% if user_signed_in? && current_user.id == @topic.user_id %>
+      <div class="t-control">
+        <%= link_to '編集', edit_topic_path(@topic.id), method: :get, class:"t-update" %>
+        <%= link_to '削除', topic_path(@topic.id), method: :delete, class:"t-delete" %>
+      </div>
+      <% end %>
+    </article>
 
     <div class="t-s-comments">
-      <div class="t-s-comment-form">
-        <% if user_signed_in? %>
-          <%= form_with model: [@topic, @comment], id: "comment-form" do |f| %>
-            <%= f.text_area :text, class:"comment-text" %>
-            <%= f.submit "コメントする", class:"comment-submit" %>
-          <% end %>
-        <% end %>
-      </div>
+      <% if user_signed_in? %>
+      <%= form_with model: [@topic, @comment], id: "comment-form" do |f| %>
+        <%= f.text_area :text, class:"comment-text" %>
+        <%= f.submit "コメントする", class:"comment-submit" %>
+      <% end %>
+      <% end %>
+      <% if Topic.exists? %>
       <div class="t-s-comment">
         <h4>コメント一覧 </h4>
-        <div class="t-s-comment-flame">
+        <div class="t-s-comment-flame" id="comment-f">
         <% @comments.each do |comment| %>
-        <div class="comment" id="comment-f">
+        <div class="comment">
           <p class="user-info"><%= comment.user.name %></p>
           <p class="text"><%= comment.text %></p>
         </div>
         <% end %>
       </div>
+      <% end %>
     </div>
 
   </div>
