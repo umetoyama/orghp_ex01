@@ -40,7 +40,7 @@
   border-top: none;
   padding: 15px;
   width: 100%;
-  display: inline-block;
+  padding: calc(2vh + 2%) calc(1vw + 2%);
 }
 
 // .t-s-comment-form {
@@ -94,9 +94,9 @@
   margin-bottom: 2px;
 }
 
-.comment-data {
+// .comment-data {
 
-}
+// }
 
 .d-b {
   margin: auto 0;

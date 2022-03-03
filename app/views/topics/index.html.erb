@@ -7,19 +7,21 @@
     <%= link_to topic_path(topics.id), class:"t-link" do %>
     <div class="topic-top">
       <div class="topic-title">
-        <div class="line">
+        <span class="brock">
           <%= topics.title %>
-        </div>
+        </span>
+        <div class="line"></div>
       </div>
       <div class="name-date">
-        <div class="name">
+        <div class="line"></div>
+        <span class="name-date-brock">
           <span>
             <%= topics.user.name %>
           </span>
           <span>
             <%= topics.created_at.strftime('%y/%m/%d') %>
           </span>
-        </div>
+        </span>
       </div>
     </div>
     <div class="t-content">

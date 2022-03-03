@@ -5,19 +5,21 @@
     <article class="topics s-size">
       <div class="topic-top">
         <div class="topic-title">
-          <div class="line">
+          <span class="brock">
             <%= @topic.title %>
-          </div>
+          </span>
+          <div class="line"></div>
         </div>
         <div class="name-date">
-          <div class="name">
+          <div class="line"></div>
+          <span class="name-date-brock">
             <span>
               <%= @topic.user.name %>
             </span>
             <span>
               <%= @topic.created_at.strftime('%y/%m/%d') %>
             </span>
-          </div>
+          </span>
         </div>
       </div>
       <div class="t-content">
