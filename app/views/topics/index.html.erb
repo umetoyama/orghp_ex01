@@ -1,35 +1,51 @@
 <%= render "shared/second-header" %>
 
 <% if Topic.exists? %>
-<div class="topic-base">
-  <% @topics.each do |topics| %>
-  <article class="topics">
-    <%= link_to topic_path(topics.id), class:"t-link" do %>
-    <div class="topic-top">
-      <div class="topic-title">
-        <span class="brock">
-          <%= topics.title %>
-        </span>
-        <div class="line"></div>
-      </div>
-      <div class="name-date">
-        <div class="line"></div>
-        <span class="name-date-brock">
+<div class="master-base">
+  <span class="topic-menu type">
+    <p>- トピック一覧 -</p>
+    <ul>
+      <% @topics.each do |topics| %>
+        <li>
           <span>
-            <%= topics.user.name %>
+            <%= link_to topic_path(topics.id), class:"t-link-sub" do %>
+              <%= topics.title %>
+            <% end %>
           </span>
-          <span>
-            <%= topics.created_at.strftime('%y/%m/%d') %>
+        </li>
+      <% end %>
+    </ul>
+  </span>
+  <div class="topic-base">
+    <% @topics.each do |topics| %>
+    <article class="topics type">
+      <%= link_to topic_path(topics.id), class:"t-link" do %>
+      <div class="topic-top">
+        <div class="topic-title">
+          <span class="brock">
+            <%= topics.title %>
           </span>
-        </span>
+          <div class="line"></div>
+        </div>
+        <div class="name-date">
+          <div class="line"></div>
+          <span class="name-date-brock">
+            <span>
+              <%= topics.user.name %>
+            </span>
+            <span>
+              <%= topics.created_at.strftime('%y/%m/%d') %>
+            </span>
+          </span>
+        </div>
       </div>
-    </div>
-    <div class="t-content">
-      <%= topics.content %>
-    </div>
+      <div class="t-content">
+        <%= topics.content %>
+      </div>
+      <% end %>
+    </article>  
     <% end %>
-  </article>  
-  <% end %>
+  </div>
 </div>
 <% end %>
 

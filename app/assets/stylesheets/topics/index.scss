@@ -1,21 +1,73 @@
-.topic-base {
-  width: 100vw;
+.master-base {
   padding-top: calc(12vh + 2px);
   margin-bottom: calc(12vh + 2px);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
+  width: 100vw;
   font-family: "A-OTF A1明朝 Std";
   padding-left: 2px;
   padding-right: 2px;
+  position: relative;
 }
 
-.topics {
+.topic-menu {
+  display: inline-block;
+  font-size: 10px;
+  max-height: 78vh;
+  max-width: 28vw;
+  overflow: auto;
+  margin-right: 2px;
+  position: absolute;
+  top: calc(12vh + 2px);
+  right: calc(50vw + 20vw);
+}
+
+.topic-menu p {
+  margin-bottom: 14%;
+  margin-top: -30%;
+}
+
+.topic-menu ul {
+  list-style: circle
+}
+
+.topic-menu ul li span{
+  margin-left: -6px ;
+}
+
+.topic-menu ul li:hover {
+  list-style: disc;
+} 
+
+.t-link-sub {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+}
+
+.t-link-sub:hover {
+  text-decoration: underline;
+}
+
+.topic-base {
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  // gap: 2px;
+  height: calc(100vh - (24vh + 4px));
+  overflow: auto;
+  width: 40vw;
+  margin: 0 auto;
+}
+
+.type {
   background-image: url('image/22724258_m.jpg');
   background-color:rgba(255,255,255,0.5);
   background-blend-mode:lighten;
   border: solid 0.5px darkgray;
   padding: calc(2vh + 2%) calc(1vw + 2%);
+}
+
+.topics {
+  // width: 40vw;
+  // margin: 0 auto;
+  margin-bottom: 1%;
 }
 
 .t-link {
