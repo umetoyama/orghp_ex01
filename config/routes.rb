@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   resources :users, only:[:index]
   resources :works, only:[:index]
-  resources :topics, only:[:index, :new, :create]
+  resources :topics do
+    resources :comments, only:[:create, :destroy]
+  end
   resources :companies, only:[:index]
   resources :contacts, only:[:new, :create]
   
