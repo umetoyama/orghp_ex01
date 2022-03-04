@@ -65,10 +65,11 @@
 
 .profile-text {
   text-align: left;
-  margin-top: 4vh;
+  margin-top: 2vh;
   margin-left: 4%;
   /* line-height: 26px; */
   display: inline-block;
   word-break: break-all;
   max-width: calc(40vw - 6%);
+  white-space: pre-line;
 } 
