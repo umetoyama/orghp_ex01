@@ -26,14 +26,9 @@
   border: solid 1px darkgray;
   padding: 3%;
   overflow: hidden;
-
   font-family: '851マカポップ';
   color: red;
-  font-size: 28px;
-
-  /* transform: rotate(-6deg);
-  margin: calc(1vh + 6px) 0 0 2vh; */
-
+  font-size: 24px;
   margin-bottom: 2px;
 }
 
@@ -49,9 +44,31 @@
   border-radius: 4px;
 }
 
+.profile-text-p-n {
+  display: inline-block;
+  margin-top: -6vh;
+  margin-left: 5%;
+}
+
+.profile-text-top {
+  text-align: left;
+  /* line-height: 26px; */  
+  transform: rotate(-6deg);
+  font-size: 52px;
+  display: inline-block;
+  /* margin-top: 2vh; */
+}
+
+.top-blank {
+  margin-top: 2%;
+}
+
 .profile-text {
   text-align: left;
-  margin-top: 10px;
-  margin-left: 20px;
-  /* line-height: 26px; */  
+  margin-top: 4vh;
+  margin-left: 4%;
+  /* line-height: 26px; */
+  display: inline-block;
+  word-break: break-all;
+  max-width: calc(40vw - 6%);
 } 
