@@ -1,33 +1,45 @@
-.master {
-  width: 100vw;
-  height: 100vh;
+.member-block-master {
+  padding-top: calc(12vh + 2px);
+  padding-bottom: calc(12vh + 2px);
 }
 
 .member-block {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  width: 40vw;
+  margin: 0 auto;
 }
 
 .member-list {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  margin-left: 1px;
+  gap: 2px; */
+  /* margin-left: 1px; */
   /* margin-top: 6px; */
 }
 
 .info-frame {
-  display: flex;
-  width: 32vw;
-  height: 46vh;
-  border-radius: 4px;
-  /* margin-bottom: 5px; */
-  background: linear-gradient(to left,transparent,black);
+  /* display: flex; */
+  /* width: 32vw; */
+  height: calc(100vh - (24vh + 4px));
+  border-radius: 6px;
+  /* background: linear-gradient(to left,transparent,#000); */
+  background-color: #fff;
+  border: solid 1px darkgray;
+  padding: 3%;
+  overflow: hidden;
+
+  font-family: '851マカポップ';
+  color: red;
+  font-size: 28px;
+
+  /* transform: rotate(-6deg);
+  margin: calc(1vh + 6px) 0 0 2vh; */
+
+  margin-bottom: 2px;
 }
 
 .member-image-content {
-  width: 210px;
-  height: auto;
+  /* width: 210px; */
+  height: 65%;
 }
 
 .member-image {
@@ -41,7 +53,5 @@
   text-align: left;
   margin-top: 10px;
   margin-left: 20px;
-  line-height: 26px;
-  color: rgb(247, 253, 255);
-  font-size: 12px;
+  /* line-height: 26px; */  
 } 
