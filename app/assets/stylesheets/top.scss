@@ -404,7 +404,8 @@
   margin: 4px 0 8px 0;
   font-size: 12px;
   display: block;
-  width: 10vw;
+  // width: 10vw;
+  max-width: calc(21vw - 10px);
 }
 
 .t--n {
@@ -414,6 +415,11 @@
   display: block;
   text-align: right;
   width: 10vw;
+}
+
+.t--b {
+  max-width: calc(21vw - 10px);
+  word-break: break-all;
 }
 
 .topic-image {

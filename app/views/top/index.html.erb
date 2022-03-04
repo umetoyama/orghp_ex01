@@ -44,9 +44,15 @@
                 <span class="t--n">
                   <%= topic.user.name %>
                 </span>
+                <% if topic.content.embeds.exists? %>
                 <span class="t--p">
                   <%= image_tag topic.content.embeds[0].variant( resize: "490"), class: "topic-image" %>
                 </span>
+                <% else %>
+                <span class="t--b">
+                  <%= topic.content.body %>
+                </span>
+                <% end %>
               </div>
               <% end %>
             </div>
