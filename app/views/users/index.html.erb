@@ -1,32 +1,35 @@
 <%= render "shared/second-header" %>
 
 <div class="member-block-master">
-  <div class="member-block">
-    <div class="member-list">
-      <% @profiles.each do |member| %>
-        <div class="info-frame">
-          <div class="member-image-content">
-            <%= image_tag member.image.variant( resize: "50%"), class: "member-image" if member.image.attached? %>
-          </div>
-          <div>
-            <span class="profile-text-p-n">
-              <p class="profile-text-top">
-                <%= member.position.name %>
-              </p>
-              <p class="profile-text-top top-blank">
-                <%= member.user.name %>
-              </p>
-            </span>
-            <span class="profile-text">
-              <%# <%= member.about_me %>
-              <p>担当作品
-              <%= member.works %>
-              </p>
-            </span>
-          </div>
+  <div class="member-list">
+    <% @profiles.each.with_index(1) do |member, index| %>
+      <div class="info-frame">
+        <label for="<%= index %>">
+        <div class="member-image-content">
+          <%= image_tag member.image.variant( resize: "50%"), class: "member-image" if member.image.attached? %>
         </div>
-      <% end %>
-    </div>
+        <div>
+          <span class="profile-text-p-n">
+            <p class="profile-text-top">
+              <%= member.position.name %>
+            </p>
+            <p class="profile-text-top top-blank">
+              <%= member.user.name %>
+            </p>
+          </span>
+          <span class="profile-text">
+            <p>担当作品
+            <%= member.works %>
+            </p>
+          </span>
+        </div>
+        <input type="checkbox" id="<%= index %>">
+        <div class="blowing">
+          <p><%= member.about_me %></p>
+        </div>
+        </label>
+      </div>
+    <% end %>
   </div>
 </div>
 
