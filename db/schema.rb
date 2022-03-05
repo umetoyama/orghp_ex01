@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2022_02_28_101254) do
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "position_id", null: false
+    t.text "works"
     t.text "about_me"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

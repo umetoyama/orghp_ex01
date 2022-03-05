@@ -1,34 +1,43 @@
-<h2>Create a profile</h2>
+<div class="form-base-master">
+  <span class="form-base">
+    <h2>Create a profile</h2>
+    <div class="from-flame">
+    <%= form_for @profile do |f| %>
+      <% render "devise/shared/error_messages", resource: @profile %>
 
-<%= form_for @profile do |f| %>
-  <% render "devise/shared/error_messages", resource: @profile %>
+      <div class="image_up">
+        <div class="field">
+          Profile Image
+        </div>
+        <div class="click_up">
+          <small>
+            Click to upload the file
+          </small><br />
+          <div id="previews"></div>
+          <%= f.file_field :image, id:"profile_image" %>
+        </div>
+      </div>
 
-  <div class="image_up">
-    <div class="field">
-      Profile Image
+      <div class="field">
+        <%= f.label :position %><br />
+        <%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class: "form"}) %>
+      </div>
+
+      <div class="field">
+        <%= f.label :works %><br />
+        <%= f.text_area :works, size: "50x5", value: 'TVCM:　MV:　WEB:　　etc...', class: "form" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :about_me %><br />
+        <%= f.text_area :about_me, size: "50x15", class: "form" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "sign up", class: "form" %>
+      </div>
+    <% end %>
     </div>
-    <div class="click_up">
-      <small>
-        Click to upload the file
-      </small><br />
-      <div id="previews"></div>
-      <%= f.file_field :image, id:"profile_image" %>
-    </div>
-  </div>
-
-  <div class="field">
-    <%= f.label :position %><br />
-    <%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class: "form"}) %>
-  </div>
-
-  <div class="filed">
-    <%= f.label :about_me %><br />
-    <%= f.text_area :about_me, size: "50x15", class: "form" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "sign up", class: "form" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    <%= render "devise/shared/links" %>
+  </span>
+</div>

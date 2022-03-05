@@ -1,0 +1,58 @@
+.form-base-master {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 4vh 4vw;
+  height: 100vh;
+}
+
+.form-base {
+  // margin: auto 0;
+  background-color: #fff;
+  padding: 3vh 3vw;
+  max-height:  calc(100vh - 8vh);
+  overflow-x: auto;
+}
+
+.form-base h2 {
+  margin-bottom: 1vh;
+  // position: sticky;
+}
+
+.form-flame {
+  // overflow: auto;
+  height:  calc(100vh - 7vh);
+}
+
+.field {
+  margin-top: 1%;
+}
+
+.form {
+  background-color: rgb(243, 243, 243);
+  border: solid 0.1px rgb(112, 112, 112);
+  border-radius: 2px;
+  padding: 4px;
+  /* margin-top: 1vh; */
+}
+
+.actions-btn {
+  margin-top: 1%;
+  background-color: rgb(243, 243, 243);
+  border: solid 2px rgb(156, 156, 156);
+  padding: 2%;
+  display: inline;
+}
+
+.click_up {
+  margin-top: -1%;
+  
+  small {
+    font-size: 0.7em;
+  }
+}
+
+#previews {
+  width: 50%;
+}
