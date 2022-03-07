@@ -3,37 +3,47 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .contact-page {
-  width: 100vw;
-  height: 120vh;
-  padding-top: 10vh;
-  margin-bottom: 10vh;
+  padding-top: calc(12vh + 2px);
+  padding-bottom: calc(12vh + 2px);
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow-y: auto;
 }
 
 .contact-base {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
-  padding-top: 12vh;
-  background-color: rgba(240, 255, 240, 0.8);
-  width: 90vw;
-  height: 70vh;
-
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  padding: 2vh 2vw;
 }
 
 .contact-title {
-  padding: 10px;
-  height: 6vh;
+  padding: 4vh 2vw 0 2vw;
 }
 
-.contact div {
-  margin-top: 2vh;
+.contact {
+  padding: 2vh 4vw 4vh 4vw;
+
+   div {
+    margin-top: 1vh;
+  }
+
 }
 
 .area {
   background-color: ivory;
   border: solid 1px gray;
   border-radius: 4px;
+  padding: 8px;
+}
+
+.contact-submit-btn {
+  background-color: ivory;
+  border: solid 1px gray;
+  border-radius: 4px;
+  padding: 2px 4px;
 }
