@@ -75,10 +75,11 @@
   position: absolute;
   top: calc(-4px - 1vh - 1px);
   left: 10px;
-  width: calc(24vw + 4px + 10px);
+  // width: calc(24vw + 4px + 10px);
+  width: 280px;
   height: 3vh;
   line-height: 3vh;
-  padding-left: 10px;
+  padding-left: 24px;
   background: linear-gradient(to right,transparent,rgba(0, 0, 0, 0.4) 6%,rgba(0, 0, 0, 0.6) 70%);
   // transform: scale(1, 0.8);
 }

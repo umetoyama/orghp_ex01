@@ -22,11 +22,14 @@
 
 .topic-menu p {
   margin-bottom: 14%;
-  margin-top: -30%;
+  // margin-top: -30%;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
 .topic-menu ul {
-  list-style: circle
+  list-style: circle inside;
 }
 
 .topic-menu ul li span{
@@ -34,7 +37,7 @@
 }
 
 .topic-menu ul li:hover {
-  list-style: disc;
+  list-style: disc inside;
 } 
 
 .t-link-sub {
@@ -86,14 +89,14 @@
   display: flex;
 }
 
-.line {
-  border-bottom: solid 1px rgba(0,0,0,0.2);
-  width: 5vw;
-}
-
 .brock {
   border-bottom: solid 1px rgba(0,0,0,0.2);
   padding-left: 8px;
+}
+
+.line {
+  border-bottom: solid 1px rgba(0,0,0,0.2);
+  width: 5vw;
 }
 
 .name-date {
@@ -120,6 +123,9 @@
   font-size: 12px;
   display: inline-block;
   margin-left: 1vw;
+  word-break: break-all;
+  // overflow-wrap: break-word;
+  // white-space: pre-line;
 }
 
 // .trix-content {
