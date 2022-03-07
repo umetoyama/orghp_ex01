@@ -4,7 +4,8 @@
   <div class="top-main">
     <div class="factor">
       <div class="factor-back">
-        <div class="first">
+      
+        <section class="first">
           <div class="picture one">
             <div class="top-text-layout">
               <p class="top-text">映像好きが</p><br>
@@ -15,9 +16,9 @@
           <div class="picture two"></div>
           <div class="picture three"></div>
           <div class="picture four"></div>
-        </div>
+        </section>
 
-        <div class="w size">
+        <section class="w size">
           <div class="w-flame">
             <h3 class="work-headline">Work</h3>
             <div class="work-ex">
@@ -29,9 +30,9 @@
           <div class="ex-last">
             <%= link_to 'read more...', works_path, class:"w-link" %>
           </div>
-        </div>
+        </section>
 
-        <div class="t size">
+        <section class="t size">
           <div class="t-flame">
             <h3 class="topic-headline">Topic</h3>
             <% if Topic.exists? %>
@@ -61,9 +62,9 @@
           <div class="ex-last">
             <%= link_to 'read more...', topics_path, class:"w-link" %>
           </div>
-        </div>
+        </section>
 
-        <div class="m size">
+        <section class="m size">
           <div class="m-flame">
             <h3 class="member-headline">Member</h3>
             <% if User.exists? %>
@@ -89,25 +90,25 @@
           <div class="ex-last">
             <%= link_to 'read more...', users_path, class:"w-link" %>
           </div>
-        </div>
+        </section>
 
-        <div class="com">
+        <section class="com">
           <h3 class="com-headline">Company</h3>
           <div class="logos">
-            <%= link_to (companies_path) do %>
-              <img src="image/00_logo_two.png" class="com-logo">
+            <%= link_to (new_contact_path) do %>
+              <img src="image/メールの無料アイコンその8.png" class="contact-logo">
             <% end %>
-            <div class="sns-logo">
-              <p>-- sns --</p>
-              <%= link_to '#' do %>
-                <img src="image/Twitter social icons - rounded square - blue.png" class="sns-t">
-              <% end %>
-              <%= link_to '#' do %>
-                <img src="image/Instagram_Glyph_Gradient_RGB.png" class="sns-i">
-              <% end %>
-            </div>
+            <%= link_to (companies_path) do %>
+              <img src="image/icons8-google-maps-480.png" class="map-logo">
+            <% end %>
+            <%= link_to '#' do %>
+              <img src="image/Twitter social icons - rounded square - blue.png" class="sns-t">
+            <% end %>
+            <%= link_to '#' do %>
+              <img src="image/Instagram_Glyph_Gradient_RGB.png" class="sns-i">
+            <% end %>
           </div>
-        </div>
+        </section>
 
       </div>
     </div>
