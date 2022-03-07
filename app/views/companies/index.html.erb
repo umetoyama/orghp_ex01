@@ -1,18 +1,22 @@
 <%= render "shared/second-header" %>
-<div class="base">
+
+<div class="company-base">
   <div class="map-base">
-    <div class="data-base">
-      <div class="logo">
-        <%= image_tag '/image/00_logo.png', size: '500x350' %>
-      </div>
-      <div class="data">
-        〒000-0000
-        東京都〇〇区〇〇1丁目11-11
-        〇〇ビル
-      </div>
+    <%# <div calss="hover-label"> %>
+    <div class="logo-base">
+      <%= image_tag '/image/00_logo_two.png', alt:"", class:"logo" %>
+      <%= link_to '#' do %>
+        >>会社概要
+      <% end %>
+    </div>
+    <%# </div> %>
+    <div class="address">
+      <p>〒000-0000
+      東京都〇〇区〇〇1丁目11-11
+      〇〇ビル</p>
     </div>
     <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10828.972518084798!2d139.69274073275568!3d35.65567358985716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca9df2fffff%3A0xad0a94d4f83f0fec!2zVEVDSDo6Q0FNUCDmuIvosLfmoKE!5e0!3m2!1sja!2sjp!4v1644738858462!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10828.972518084798!2d139.69274073275568!3d35.65567358985716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca9df2fffff%3A0xad0a94d4f83f0fec!2zVEVDSDo6Q0FNUCDmuIvosLfmoKE!5e0!3m2!1sja!2sjp!4v1644738858462!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
     </div>
   </div>
