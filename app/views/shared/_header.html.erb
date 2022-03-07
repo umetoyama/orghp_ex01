@@ -1,6 +1,17 @@
 <header class="main-header">
-  <div class="temporary_title">
-    <div class="company">
-    </div>
-  </div>
-</header>
+  <div class="temporary_title"></div>
+  <nav class="nav">
+    <input type="checkbox" id="subnav">
+    <label for="subnav" class="subnav">
+      <div class="subnav-btn"></div>
+    </label>
+    <ul class="subnav-list">
+      <li><%= link_to 'top', root_path, class:"sub-list" %></li>
+      <li><%= link_to 'work', works_path, class:"sub-list" %></li>
+      <li><%= link_to 'member', users_path, class:"sub-list" %></li>
+      <li><%= link_to 'topic', topics_path, class:"sub-list" %></li>
+      <li><%= link_to 'company', companies_path, class:"sub-list" %></li>
+      <li><%= link_to 'contact', new_contact_path, class:"sub-list" %></li>
+    </ul>
+  </nav>
+</header> 

@@ -13,12 +13,3 @@ header {
   position: relative;
   background-color: rgb(0, 0, 0);
 }
-
-/* （下）この要素いらないかも？ */
-.company {
-  width: 16vw;
-  height: 9vh;
-  position: relative;
-  left: 42vw;
-}
-/* （上）この要素いらないかも？ */
