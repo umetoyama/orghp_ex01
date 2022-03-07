@@ -17,10 +17,10 @@
         </div>
         <div class="message">
           <%= f.label :お問い合わせ内容 %><br>
-          <%= f.text_area :message, class:"area" %>
+          <%= f.text_area :message, size: "50x5", class:"area" %>
         </div>
         <div class="contact-btn">
-          <%= f.submit "送信", class:"area" %>
+          <%= f.submit "送信", class:"contact-submit-btn" %>
         </div>
       <% end %>
     </div>
