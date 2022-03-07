@@ -566,46 +566,37 @@
 }
 
 .logos {
-  height: 26vh;
-  width: calc(55vw - 14vw - 2vw);
-  margin: auto 0 auto 0;
-  padding-top: 6vh;
+  height: 8vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: auto auto auto auto;
+
+  a {
+    height: 4vh;
+    width: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a > img {
+    margin: auto;
+    width: 100%;
+    // object-fit: cover;
+  }
 }
 
-.com-logo {
-  height: 10vh;
-  display: block;
-  margin: 0 auto -1vw auto;
-}
-
-.com-logo:hover {
+.contact-logo:hover {
   transform: scale(1.2, 1.2);
 }
 
-.sns-logo {
-  // width: calc(4vw + 4px + 1px);
-  width: 80px;
-  margin: 0 auto;
-}
-
-.sns-logo p {
-  font-size: 8px;
-  color: gray;
-  text-align: center;
-  margin-bottom: 6px;
-}
-
-.sns-t {
-  width: 2vw;
-  margin: 0 4px 0 16px;
+.map-logo:hover {
+  transform: scale(1.2, 1.2);
 }
 
 .sns-t:hover {
   transform: scale(1.2, 1.2);
-}
-
-.sns-i {
-  width: 2vw;
 }
 
 .sns-i:hover {
