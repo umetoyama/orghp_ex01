@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     post 'profiles', to: 'users/registrations#create_profile'
   end
 
-  resources :users, only:[:index, :new]
+  resources :users, only:[:index, :new, :show]
   resources :works, only:[:index]
   resources :topics do
     resources :comments, only:[:create, :destroy]
