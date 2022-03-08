@@ -34,6 +34,7 @@
   z-index: -9;
   opacity: 0.2;
   height: 100%;
+  width: 100vw;
   object-fit: cover;
   position: fixed;
 }
