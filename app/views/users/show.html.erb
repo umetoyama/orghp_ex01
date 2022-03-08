@@ -1,0 +1,20 @@
+<div class="my-base">
+  <div class="my-flame">
+    <P>おはようございます!!</p>
+    <main class="my-page">
+      <nav><%= @user.name %>さん</nav>
+      <div class="new-work" >
+        <%= link_to '新しい仕事を追加', '#' %>
+      </div>
+      <div class="new-topic">
+        <%= link_to '新しいトピックを投稿', new_topic_path %>
+      </div>
+      <div class="home-page">
+        <%= link_to 'ホームページへ', root_path %>
+      </div>
+      <div class="log-out">
+        <%= link_to 'ログアウト', "/users/sign_out", method: :delete %>
+      </div>
+    </main>
+  </div>
+</div>
