@@ -31,6 +31,10 @@
   padding: 2%;
 }
 
+#topic_content {
+  min-height: 60vh;
+}
+
 .btn {
   background-color: rgb(236, 236, 236);
   border-radius: 1px;
