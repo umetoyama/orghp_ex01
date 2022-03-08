@@ -1,5 +1,6 @@
 <%= render "shared/second-header" %>
 
+<% if User.exists? %>
 <div class="member-block-master">
   <div class="member-list">
     <% @profiles.each.with_index(1) do |member, index| %>
@@ -32,5 +33,8 @@
     <% end %>
   </div>
 </div>
+<% else %>
+<%= render "shared/temporary_member_index" %>
+<% end %>
 
 <%= render "shared/footer" %>
