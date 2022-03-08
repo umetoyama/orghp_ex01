@@ -29,10 +29,15 @@ footer {
   list-style: none;
 }
 
-.registration {
-  padding-right: 15px;
+.management li a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.session {
-  padding-right: 20px;
+.management li:hover a {
+  text-decoration: underline;
 }
+
+  .session {
+    padding: 0 2vw 0 1vw;
+  }

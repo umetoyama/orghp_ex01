@@ -1,0 +1,75 @@
+.my-base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  height: 100vh;
+}
+
+.my-flame {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 24vh 3vw;
+  height: 90vh;
+  width: 90vw;
+
+
+  p {
+    text-align: center;
+    margin-bottom: 2vh;
+  }
+
+}
+
+.my-page {
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 60vw;
+  height: 30vh;
+  border: 1px solid rgba(128, 128, 128, 0.6);
+
+  nav {
+    grid-row: 1 / 4;
+    grid-column: 1;
+    line-height: 30vh;
+    text-align: center;
+    height: 30vh;
+    background-color: rgba(128, 128, 128, 0.2);
+  }
+
+}
+
+.new-work {
+  grid-row: 1;
+  grid-column: 2 / 4;
+  margin: 0 auto;
+  line-height: 10vh;
+  font-size: 16px;
+}
+
+.new-topic {
+  grid-row: 2;
+  grid-column: 2 / 4;
+  margin: 0 auto;
+  line-height: 10vh;
+  font-size: 16px;
+}
+
+.home-page {
+  grid-row: 3;
+  grid-column: 2;
+  line-height: 10vh;
+  font-size: 14px;
+  text-align: end;
+  // padding-right: 1vw;
+}
+
+.log-out {
+  grid-row: 3;
+  grid-column: 3;
+  line-height: 10vh;
+  font-size: 14px;
+  text-align: start;
+  padding-left: 2vw;
+}

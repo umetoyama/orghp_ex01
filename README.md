@@ -38,4 +38,4 @@
 
  ## 工夫したポイント
 
- 
+ http://localhost:3000/users/new
