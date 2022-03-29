@@ -3,10 +3,10 @@
     <P>おはようございます!!</p>
     <main class="my-page">
       <nav><%= @user.name %>さん</nav>
-      <div class="new-work" >
-        <%= link_to '新しい仕事を追加', '#' %>
+      <div class="new-work-link" >
+        <%= link_to '新しい仕事を追加', new_work_path %>
       </div>
-      <div class="new-topic">
+      <div class="new-topic-link">
         <%= link_to '新しいトピックを投稿', new_topic_path %>
       </div>
       <div class="home-page">

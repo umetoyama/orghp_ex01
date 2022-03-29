@@ -1,0 +1,40 @@
+<div class="new-work">
+  <div class="new-work__frame">
+
+    <h2>Register your production work</h2>
+
+    <div class="new-work__inner">
+      <%= form_with model: @work, local: true do |w| %>
+        <div class="new-work__inner--image">
+          <p>Work Image</p>
+          <div class="click_up">
+            <small>Click to upload the file</small><br />
+            <div id="previews"></div>
+            <%= w.file_field  :image, id:"work_image" %><br />
+          </div>
+        </div>
+
+        <div class="new-work__inner--movie_link">
+          <%= w.label :movie_link %>
+          <%= w.text_field :movie_link %>
+        </div>
+        <div class="new-work__inner--title">
+          <%= w.label :title %>
+          <%= w.text_field :title %>
+        </div>
+        <div class="new-work__inner--category">
+          <%= w.label :category %>
+          <%= w.text_field :category %>
+        </div>
+        <div class="new-work__inner--description">
+          <%= w.label :description %>
+          <%= w.text_area :description %>
+        </div>
+        <div>
+          <%= w.submit 'Send', class:"btn" %>
+          <%= link_to '戻る', user_path(current_user.id), method: :get, class:"return" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

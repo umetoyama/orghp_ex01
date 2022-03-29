@@ -1,33 +1,33 @@
 <%= render "shared/second-header" %>
 
 <% if User.exists? %>
-<div class="member-block-master">
-  <div class="member-list">
+<div class="member__master">
+  <div class="member__list">
     <% @profiles.each.with_index(1) do |member, index| %>
-      <div class="info-frame">
+      <div class="member__frame">
         <label for="<%= index %>">
-        <div class="member-image-content">
-          <%= image_tag member.image.variant( resize: "50%"), class: "member-image" if member.image.attached? %>
+        <div class="member__image-content">
+          <%= image_tag member.image.variant( resize: "50%"), class: "member__image-picture" if member.image.attached? %>
         </div>
         <div>
-          <span class="profile-text-p-n">
-            <p class="profile-text-top">
+          <span class="member__profile-text">
+            <p class="member__profile-text-top m-b-s">
               <%= member.position.name %>
             </p>
-            <p class="profile-text-top top-blank">
+            <p class="member__profile-text-top">
               <%= member.user.name %>
             </p>
           </span>
-          <span class="profile-text">
+          <span class="member__profile-text-works">
             <p>担当作品
             <%= member.works %>
             </p>
           </span>
         </div>
         <input type="checkbox" id="<%= index %>">
-        <div class="blowing">
+        <span class="member__blowing">
           <p><%= member.about_me %></p>
-        </div>
+        </span>
         </label>
       </div>
     <% end %>

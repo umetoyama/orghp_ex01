@@ -1,4 +1,4 @@
-.master-base {
+.topics__master {
   padding-top: calc(12vh + 2px);
   margin-bottom: calc(12vh + 2px);
   width: 100vw;
@@ -8,7 +8,11 @@
   position: relative;
 }
 
-.topic-menu {
+#topics__menu-btn {
+  display: none;
+}
+
+.topics__menu {
   display: inline-block;
   font-size: 10px;
   max-height: 78vh;
@@ -20,7 +24,7 @@
   right: calc(50vw + 20vw);
 }
 
-.topic-menu p {
+.topics__menu p {
   margin-bottom: 14%;
   // margin-top: -30%;
   display: inline-block;
@@ -28,28 +32,28 @@
   text-align: center;
 }
 
-.topic-menu ul {
+.topics__menu ul {
   list-style: circle inside;
 }
 
-.topic-menu ul li span{
+.topics__menu ul li span{
   margin-left: -6px ;
 }
 
-.topic-menu ul li:hover {
+.topics__menu ul li:hover {
   list-style: disc inside;
-} 
+}
 
-.t-link-sub {
+.topics__menu-link {
   text-decoration: none;
   color: rgb(50, 50, 50);
 }
 
-.t-link-sub:hover {
+.topics__menu-link:hover {
   text-decoration: underline;
 }
 
-.topic-base {
+.topics__base {
   // display: grid;
   // grid-template-columns: repeat(2, 1fr);
   // gap: 2px;
@@ -64,27 +68,27 @@
   background-color:rgba(255,255,255,0.5);
   background-blend-mode:lighten;
   border: solid 0.5px darkgray;
-  padding: calc(2vh + 2%) calc(1vw + 2%);
+  padding: calc(2vh + 4%) calc(1vw + 2%);
 }
 
-.topics {
+.topics__frame {
   // width: 40vw;
   // margin: 0 auto;
   margin-bottom: 1%;
 }
 
-.t-link {
+.topics__link {
   text-decoration: none;
   color: rgb(50, 50, 50);
 }
 
-.topic-top {
+.topics__top {
   height: calc(3vh + 2vh);
   margin-bottom: 3vh;
   position: relative;
 }
 
-.topic-title {
+.topics__title {
   font-size: 16px;
   display: flex;
 }
@@ -99,14 +103,14 @@
   width: 5vw;
 }
 
-.name-date {
+.topics__name {
   // height: 2vh;
   display: flex;
   position: absolute;
   right: 0;
 }
 
-.name-date-brock {
+.topics__name-brock {
   font-size: 10px;
   color: rgb(95, 95, 95);
   text-align: end;
@@ -119,13 +123,17 @@
 //   transform: translate(0, -4px);
 // }
 
-.t-content {
+.topics__content {
   font-size: 12px;
   display: inline-block;
-  margin-left: 1vw;
+  margin-left: 2%;
   word-break: break-all;
   // overflow-wrap: break-word;
   // white-space: pre-line;
+
+  & img {
+    width: 98%;
+  }
 }
 
 // .trix-content {

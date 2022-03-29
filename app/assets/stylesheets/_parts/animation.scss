@@ -1,0 +1,112 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+    transform-origin: center;
+    // transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    // transform: translateX(-50%);
+    transform: translateY(0);
+    transform-origin: center;
+  }
+}
+
+@keyframes arrowsFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+  20%,
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(4px);
+  }
+}
+
+@keyframes rollUp {
+  0%{
+    transform: translateY(40px);
+  }
+  20%,
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+
+
+
+
+@keyframes shutter {
+  0% {
+    border-top: 0vh solid black;
+    border-bottom: 50vh solid black;
+    height: 150vh;
+  }
+  100% {
+    border-top: 50vh solid black;
+    border-bottom: 50vh solid black;
+    height: 100vh;
+  }
+}
+
+.click {
+  display: fixed;
+  & .inner1 {
+    animation: shutter 6s linear;
+  }
+}
+
+.shutter {
+  overflow: hidden;
+  height: 100vh;
+  z-index: 200;
+  display: none;
+  & .inner1 {
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+
+
+@keyframes rotation1 {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(180deg); }
+}
+
+
+@keyframes rotation2 {
+	0% { background: #797979; }
+	50% { background: #606060; }
+}
+
+.circle {
+  z-index: 10;
+  height: 100vh;
+}
+
+.inner2 {
+  animation: rotation1 3s linear 20,
+  rotation2 6s step-end 10;
+}
+
+

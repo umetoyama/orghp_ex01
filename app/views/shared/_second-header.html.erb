@@ -1,15 +1,15 @@
-<header class="fix-content">
+<header class="fix-content shadow-top">
   <div>
     <% if current_page?(works_path) %>
-      <h1 class="top">WORK</h1>
+      <h1 class="page-title">WORK</h1>
     <% elsif current_page?(users_path) %>
-      <h1 class="top">MEMBER</h1>
+      <h1 class="page-title">MEMBER</h1>
     <% elsif current_page?(topics_path) %>
-      <h1 class="top">TOPIC</h1>
+      <h1 class="page-title">TOPIC</h1>
     <% elsif current_page?(companies_path) %>
-      <h1 class="top">COMPANY</h1>
+      <h1 class="page-title">COMPANY</h1>
     <% else current_page?(new_contact_path) %>
-      <h1 class="top">CONTACT</h1>
+      <h1 class="page-title">CONTACT</h1>
     <% end %>
   </div>
   <nav class="nav">

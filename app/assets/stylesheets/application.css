@@ -10,35 +10,44 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require reset.css
+ *= require_tree ./_parts
+ *= require_tree ./shared
+ *= require_tree ./page-style
  *= require_tree .
  *= require_self
  */
 
- body {
-   /* デフォルトフォントサイズを10pxに設定 */
-   font-size: 62.5%;
- }
+html {
+  scroll-behavior: smooth;
+}
 
- body::after {
+body {
+   /* デフォルトフォントサイズを10pxに設定 */
+  font-size: 62.5%;
+}
+
+body::after {
   content: '';
   width: 100%;
   height: 100vh;
-  background: radial-gradient(rgb(195, 195, 195) 5%, rgb(65, 65, 65) 30%, #000 80%);
+  background: radial-gradient(rgba(100, 100, 100, 1) 5%, rgba(40, 40, 40, 1) 30%, rgb(0, 0, 0) 80%);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -10;
- }
+  z-index: -20;
+}
 
- .film {
-  z-index: -9;
-  opacity: 0.2;
+.film {
+  z-index: 90;
+  opacity: 0.1;
   height: 100%;
   width: 100vw;
   object-fit: cover;
   position: fixed;
+  pointer-events: none;
 }
 
  /* * {
-   border: solid 0.1px red;
+  border: solid 0.1px red;
  } */

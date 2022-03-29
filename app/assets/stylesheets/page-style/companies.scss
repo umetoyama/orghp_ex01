@@ -21,6 +21,7 @@
   height: 10vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 // .hover-label {
@@ -34,13 +35,16 @@
 // }
 
 .logo {
-  width: 16vw;
-  height: 14vh;
-  margin-left: calc(96vw / 2 - 9%);
-  margin-right: -3vw;
-  margin-bottom: -1vh;
+  // width: 20vw;
+  // height: 18vh;
+  height: 130%;
+  // margin-left: 50%;
+  // transform: translateX(-50%);
+  margin-bottom: -1%;
   object-fit: contain;
   display: block;
+  min-width: 130px;
+  max-height: 150px;
 }
 
 .logo-base a {

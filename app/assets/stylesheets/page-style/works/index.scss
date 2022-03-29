@@ -4,8 +4,6 @@
 
 .works-master {
   width: 100vw;
-  // height: 124vh;
-  height: 300vh;
   padding-top: 10vh;
   margin-bottom: 10vh;
 }
@@ -30,7 +28,7 @@
 }
 
 // モーダルウィンドウ----------------
-// modal-〇〇の部分をクリックしたclass名という記述にできれば短くできるはず
+// modal-〇〇の部分をクリックしたclass名という記述にできれば短くできるかも?
 // br
 .modal-br input {
   display: none;
@@ -134,20 +132,33 @@
 .modal-zen input:checked+div {
   display: block;
 }
+
+// ex
+.modal-ex input {
+  display: none;
+}
+
+.modal-ex input+div {
+  display: none;
+}
+
+.modal-ex input:checked+div {
+  display: block;
+}
 // ----------------------------------
 
 
-.button {
-  position: absolute;
-  top: 12vh;
-  left: 3vw;
-  background-color: rgb(255, 255, 255);
-  color: #000;
-  height: 2vh;
-  width: 2vh;
-  border: solid 1px #000;
-  text-align: center;
-}
+// .button {
+//   position: absolute;
+//   top: 12vh;
+//   left: 3vw;
+//   background-color: rgb(255, 255, 255);
+//   color: #000;
+//   height: 2vh;
+//   width: 2vh;
+//   border: solid 1px #000;
+//   text-align: center;
+// }
 
 .back {
   background-color: rgba($color: #ffff, $alpha: 0.5);
@@ -158,18 +169,42 @@
   right: 0;
   z-index: 10;
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
+  // padding: 25%;
+}
+
+.wrap {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  // top: 0%;
+  // left: 0%;
+  z-index: 20;
+  transform: translateX(-35%) translateY(-35%);
+  margin: auto;
+  padding-bottom: 56.25%;
+  // overflow: hidden;
+  height: 0;
+  width: 100%;
 }
 
 .mv {
-  position: fixed;
-  top: 14vh;
-  bottom: 0;
+  position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
-  margin: 0 auto;
-  z-index: 20;
-  transform: translate(0, 0) scale(1);
-  transition: 0.2s;
-  width: 90vw;
+  // z-index: 20;
+  height: 70%;
+  width: 70%;
+  // max-width: 1200px;
+  // max-height: 670px;
+}
+
+.modal-ex {
+  & iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70%;
+    width: 70%;
+  }
 }
