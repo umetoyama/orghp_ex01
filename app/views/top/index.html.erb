@@ -1,59 +1,67 @@
 <%= render "shared/header" %>
 
-<div class="top-base">
-  <div class="top-main">
-    <div class="factor">
-      <div class="factor-back">
-      
-        <section class="first">
-          <div class="picture one">
-            <div class="top-text-layout">
-              <p class="top-text">映像好きから</p><br>
-              <p class="top-text">すべての人へ</p><br>
-              <p class="top-text">届く映像創ります</p>
+<div class="top">
+  <div class="top__base" id="page-top">
+  <div class="target"></div>
+    <main class="top__main">
+
+      <section class="hero shadow-top">
+        <div class="hero__background"></div>
+        <img src="image/c32c964a-e63a-4da0-a659-395f48950f67.jpg" alt="" id="hero__picture" class="max-w">
+        <%# <img src="image/d75006ee-6b87-4d95-b460-55ad070aa9fd.jpg" alt="" id="hero__picture" class="max-w">
+        <img src="image/752bb9cf-529d-45f9-ba7b-300ce9480012.jpg" alt="" id="hero__picture" class="max-w">
+        <img src="image/cat-gdd55f827d_1280.jpg" alt="" id="hero__picture" class="max-w"> %>
+        <div class="hero__text">
+          <p>映像好きから</p><br>
+          <p>すべての人まで</p><br>
+          <p>届く映像創ります</p>
+        </div>
+        <div class="hero__footer">
+          <span class="scroll-down">Scroll Down</span>
+        </div>
+      </section>
+
+      <div class="top__main-back max-w p-t">
+
+        <section class="w section-size max-w">
+          <div class="w__frame">
+            <h2 class="w__headline">Work</h2>
+            <div class="w__ex">
+              <img src="image/br_スクリーンショット 2022-02-20 14.57.50.png" class="max-cw">
+              <img src="image/do_スクリーンショット 2022-02-20 15.00.49.png" class="max-cw">
+              <img src="image/on_スクリーンショット 2022-02-20 15.08.00.png" class="max-cw">
             </div>
           </div>
-          <div class="picture two"></div>
-          <div class="picture three"></div>
-          <div class="picture four"></div>
-        </section>
-
-        <section class="w size">
-          <div class="w-flame">
-            <h3 class="work-headline">Work</h3>
-            <div class="work-ex">
-              <img src="image/br_スクリーンショット 2022-02-20 14.57.50.png" class="ex a">
-              <img src="image/do_スクリーンショット 2022-02-20 15.00.49.png" class="ex b">
-              <img src="image/on_スクリーンショット 2022-02-20 15.08.00.png" class="ex c">
-            </div>
-          </div>
-          <div class="ex-last">
-            <%= link_to 'read more...', works_path, class:"w-link" %>
+          <div class="ex-slidecover">
+            <%= link_to 'More', works_path, class:"top-link" %>
+            <div class="top-link-back"></div>
           </div>
         </section>
 
-        <section class="t size">
-          <div class="t-flame">
-            <h3 class="topic-headline">Topic</h3>
+        <section class="t section-size max-w">
+          <div class="t__frame">
+            <h2 class="t__headline">Topic</h2>
             <% if Topic.exists? %>
-            <div class="topic-ex">
+            <div class="t__ex">
               <% @topics_new.each do |topic| %>
-              <div class="t--one">
-                <span class="t--t">
-                  <%= topic.title %>
-                </span>
-                <span class="t--n">
-                  <%= topic.user.name %>
-                </span>
-                <% if topic.content.embeds.exists? %>
-                <span class="t--p">
-                  <%= image_tag topic.content.embeds[0].variant( resize: "490"), class: "topic-image" %>
-                </span>
-                <% else %>
-                <span class="t--b">
-                  <%= topic.content.body %>
-                </span>
-                <% end %>
+              <div class="t__ex-content max-cw">
+                <div class="t__ex-content-inner">
+                  <span class="t__ex-content-title">
+                    <%= topic.title %>
+                  </span>
+                  <span class="t__ex-content-name">
+                    <%= topic.user.name %>
+                  </span>
+                  <% if topic.content.embeds.exists? %>
+                  <span class="t__ex-content-image">
+                    <%= image_tag topic.content.embeds[0].variant( resize: "490"), class: "topic-image" %>
+                  </span>
+                  <% else %>
+                  <span class="t__ex-content-body">
+                    <%= topic.content.body %>
+                  </span>
+                  <% end %>
+                </div>
               </div>
               <% end %>
             </div>
@@ -61,26 +69,27 @@
             <%= render "shared/temporary_topic" %>
             <% end %>
           </div>
-          <div class="ex-last">
-            <%= link_to 'read more...', topics_path, class:"w-link" %>
+          <div class="ex-slidecover">
+            <%= link_to 'More', topics_path, class:"top-link" %>
+            <div class="top-link-back"></div>
           </div>
         </section>
 
-        <section class="m size">
-          <div class="m-flame">
-            <h3 class="member-headline">Member</h3>
+        <section class="m section-size max-w">
+          <div class="m__frame">
+            <h2 class="m__headline">Member</h2>
             <% if User.exists? %>
-            <div class="member-ex">
+            <div class="m__ex">
               <% @profile_select.each do |member| %>
-              <div class="m--one">
-                <div class="m--pic">
-                  <%= image_tag member.image.variant( resize: "50%"), class: "member-image" %>
+              <div class="m__ex-content max-cw">
+                <div class="m__ex-content-pic">
+                  <%= image_tag member.image.variant( resize: "50%"), class: "member__image-picture" %>
                 </div>
-                <span class="m--text">
-                  <span class="m--pos">
+                <span class="m__ex-content-text">
+                  <span class="m__ex-content-pos">
                     <%= member.position.name %>
                   </span>
-                  <span class="m--n">
+                  <span class="m__ex-content-name">
                     <%= member.user.name %>
                   </span>
                 </span>
@@ -91,14 +100,15 @@
             <%= render "shared/temporary_member" %>
             <% end %>
           </div>
-          <div class="ex-last">
-            <%= link_to 'read more...', users_path, class:"w-link" %>
+          <div class="ex-slidecover">
+            <%= link_to 'More', users_path, class:"top-link" %>
+            <div class="top-link-back"></div>
           </div>
         </section>
 
-        <section class="com">
-          <h3 class="com-headline">Company</h3>
-          <div class="logos">
+        <section class="com max-w">
+          <h2 class="com__headline">Company</h2>
+          <div class="com__logos">
             <%= link_to (new_contact_path) do %>
               <img src="image/メールの無料アイコンその8.png" class="contact-logo">
             <% end %>
@@ -113,9 +123,10 @@
             <% end %>
           </div>
         </section>
-
+        <a href="#page-top" class="page-top-btn">↑ページ上へ戻る↑</a>
       </div>
-    </div>
+      
+    </main>
   </div>
 </div>
 
