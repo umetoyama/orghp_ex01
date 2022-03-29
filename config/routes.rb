@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, only:[:index, :new, :show]
-  resources :works, only:[:index]
+  resources :works, only:[:index, :new, :create]
   resources :topics do
     resources :comments, only:[:create, :destroy]
   end
