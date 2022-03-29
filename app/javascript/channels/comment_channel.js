@@ -17,13 +17,13 @@ if(location.pathname.match(/\/topics\/\d/)) {
   
     received(data) {
       const html = `
-        <div class="comment">
-          <p class="user-info">${data.user.name}:</p>
-          <p class="text">${data.comment.text}</p>
+        <div class="one-topic__comment-block">
+          <p class="one-topic__comment-user">${data.user.name}:</p>
+          <p class="one-topic__comment-data">${data.comment.text}</p>
         </div>`
       const comments = document.getElementById("comment-f")
       comments.insertAdjacentHTML('beforebegin', html)
-      const commentForm = document.getElementById("comment-form")
+      const commentForm = document.getElementById("one-topic__comment-form")
       commentForm.reset();
     }
   })

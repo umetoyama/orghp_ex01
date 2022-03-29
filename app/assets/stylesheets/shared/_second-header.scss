@@ -7,7 +7,7 @@
   font-family: "ヒラギノ角ゴ Pro";
 }
 
-.top {
+.page-title {
   text-align: center;
   line-height: 12vh;
   font-size: 42px;
@@ -23,11 +23,24 @@
 
 #subnav {
   display: none;
-}
 
-#subnav:checked ~ ul {
-  display: flex;
-  animation: fadeIn 0.5s ease;
+  &:checked {
+    & ~ ul {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+    }
+    // & .subnav-btn {
+    //   &::before {
+    //     background: rgba(168, 23, 23, 0.8);
+    //     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8), 0 0 0 4px rgba(168, 23, 23, 0.8);
+    //   }
+    // }
+  }
+
+  // &:checked .subnav-btn::before {
+  //   background: rgba(168, 23, 23, 0.8);
+  //   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8), 0 0 0 4px rgba(168, 23, 23, 0.8);
+  // }
 }
 
 .subnav {
@@ -49,38 +62,14 @@
     height: 30px;
     margin: auto;
     border-radius: 15px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1), 0 0 0 4px rgba(255, 255, 255, 1), 0 0 0 5px rgba(0, 0, 0, 1);
+  }
+
+  &:hover::before {
     background: rgba(168, 23, 23, 0.8);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8), 0 0 0 4px rgba(168, 23, 23, 0.8);
   }
-
-  // &::before{
-  //   content:'';
-  //   width: 0;
-  //   height: 0;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   bottom: 0;
-  //   margin: auto;
-  //   box-sizing: border-box;
-  //   border: 8px solid transparent;
-  //   border-left: 14px solid rgb(196, 196, 196);
-  //   z-index: 2;
-  // }
-  // &::after {
-  //   position: absolute;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: -13px;
-  //   margin: auto;
-  //   content: '';
-  //   width: 36px;
-  //   height: 36px;
-  //   // border: 1px solid #555;
-  //   border-radius: 18px;
-  //   background: rgba(65, 65, 65, 0.8);
-  //   z-index: 1;
-  // }
 }
 
 .subnav-list {
@@ -110,17 +99,3 @@
     color: #fff;
   }
 }
-
-
-// アニメーション設定--------------
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-// -----------------------ーーーー

@@ -1,0 +1,62 @@
+// @ユーティリティクラス
+.overlay-white {
+  background-color:rgba(255,255,255,0.5);
+  background-blend-mode:lighten;
+}
+
+.f-h {
+  font-size: 42px;
+}
+
+.f-b {
+  font-size: 28px;
+}
+
+.f-m {
+  font-size: 26px;
+}
+
+.f-s {
+  font-size: 12px;
+}
+
+.f-s {
+  font-size: 10px;
+}
+
+.max-w {
+  max-width: 480px;
+}
+
+.max-cw {
+  max-width:  250px;
+}
+
+.shadow-top {
+  box-shadow: 0 20px 30px -5px rgba(54, 54, 54, 0.8);
+}
+
+.shadow-bottom {
+  box-shadow: 0 -20px 30px -5px rgba(54, 54, 54, 0.8);
+}
+
+.p-t {
+  padding-top: 12vh;
+}
+
+.m-t-s {
+  margin-top: 6%;
+}
+
+.m-b-s {
+  margin-bottom: 8%;
+}
+
+// $変数
+$cGold: rgb(209, 172, 51);
+$cWhite: rgb(255, 255, 255);
+$cShadowColor: rgb(54, 54, 54);
+$cMagicPenColor: red;
+$cBorderColor: darkgray;
+$cContentUnderColor: rgba(83, 83, 83, 0.4);
+$frameColor: rgb(230, 230, 230);

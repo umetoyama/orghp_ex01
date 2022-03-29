@@ -1,35 +1,43 @@
 <%= render "shared/second-header" %>
 
 <% if Topic.exists? %>
-<div class="master-base">
-  <span class="topic-menu type">
+<div class="topics__master">
+  <input type="checkbox" id="topics__menu-btn">
+  <label for="topics__menu-btn" class="topics__menu-btn-label">
+    <%# <button class="topics__menu-btn"> %>
+      <span></span>
+      <span></span>
+      <span></span>
+    <%# </button> %>
+  </label>
+  <nav class="topics__menu type">
     <p>- トピック一覧 -</p>
     <ul>
       <% @topics.each do |topics| %>
         <li>
           <span>
-            <%= link_to topic_path(topics.id), class:"t-link-sub" do %>
+            <%= link_to topic_path(topics.id), class:"topics__menu-link" do %>
               <%= topics.title %>
             <% end %>
           </span>
         </li>
       <% end %>
     </ul>
-  </span>
-  <div class="topic-base">
+  </nav>
+  <div class="topics__base">
     <% @topics.each do |topics| %>
-    <article class="topics type">
-      <%= link_to topic_path(topics.id), class:"t-link" do %>
-      <div class="topic-top">
-        <div class="topic-title">
+    <article class="topics__frame type">
+      <%= link_to topic_path(topics.id), class:"topics__link" do %>
+      <div class="topics__top">
+        <div class="topics__title">
           <span class="brock">
             <%= topics.title %>
           </span>
           <div class="line"></div>
         </div>
-        <div class="name-date">
+        <div class="topics__name">
           <div class="line"></div>
-          <span class="name-date-brock">
+          <span class="topics__name-brock">
             <span>
               <%= topics.user.name %>
             </span>
@@ -39,7 +47,7 @@
           </span>
         </div>
       </div>
-      <div class="t-content">
+      <div class="topics__content">
         <%= topics.content %>
       </div>
       <% end %>

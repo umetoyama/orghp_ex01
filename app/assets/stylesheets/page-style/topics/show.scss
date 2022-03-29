@@ -1,4 +1,4 @@
-.t-s-base {
+.one-topic__base {
   width: 100vw;
   padding-top: calc(12vh + 2px);
   margin-bottom: calc(12vh + 2px);
@@ -9,7 +9,7 @@
   font-family: "A-OTF A1明朝 Std";
 }
 
-.t-s-flame {
+.one-topic__frame {
   width: 40vw;
   margin: 0 auto;
 }
@@ -18,7 +18,9 @@
   width: 100%;
 }
 
-.t-control {
+
+
+.one-topic__control {
   width: 100%;
   text-align: center;
 
@@ -27,16 +29,13 @@
     color: #000;
   }
 
-  .t-update {
+  .one-topic__update {
     margin-right: 1vw;
   }
   
 }
 
-// .t-delete {
-// }  
-
-.t-s-comments {
+.one-topic__comments {
   border: solid 0.5px darkgray;
   border-top: none;
   padding: 15px;
@@ -48,56 +47,65 @@
 //   margin-bottom: 20px;
 // }
 
-#comment-form {
-  position: relative;
-}
+// #one-topic__comment-form {
+// }
 
-.comment-text {
+.one-topic__comment-text {
   resize: none;
   width: 24vw;
   height: 4vh;
   overflow: auto;
   border: 1px solid #000;
-  padding: 4px;
+  padding: 4px 10px;
   font-size: 12px;
+  vertical-align: middle;
 }
 
-.comment-submit {
+.one-topic__comment-submit {
   border: 1px solid  #000;
   font-size: 10px;
   width: calc(6vw + 8px);
-  height: 2vh;
-  position: absolute;
-  left: calc(24vw + 4px);
-  top: 2vh;
+  vertical-align: bottom;
 }
 
-.t-s-comment {
+.one-topic__comments-base {
   border: #000;
   padding-top: 20px;
 }
 
-.t-s-comment-flame {
+.one-topic__comments-frame {
   overflow: auto;
   height: 64vh;
-  padding-top: 6px;
+  // padding-top: 1%;
 }
 
-.comment {
-  margin-top: 8px;
+.one-topic__comment {
+  margin-top: 3%;
   background-color: rgba(231, 119, 156, 0.521);
-  padding: 6px;
+  padding: 6px 10px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    border-top: transparent 3px solid;
+    border-bottom: transparent 3px solid;
+    border-left: transparent 40px solid;
+    border-right: 40px solid rgba(92, 92, 92, 0.521);
+    // width: 100%;
+    // height: 100%;
+    // background-color: rgba(92, 92, 92, 0.521);
+    transform: rotate(4deg);
+  }
 }
 
-.user-info {
+.one-topic__comment-user {
   margin-bottom: 2px;
 }
-
-// .comment-data {
-
-// }
 
 .d-b {
   margin: auto 0;
@@ -108,7 +116,7 @@
   display: none;
 }
 
-.comment:hover span {
+.one-topic__comment:hover span {
   position: relative;
   display: block;
   width: 20px;

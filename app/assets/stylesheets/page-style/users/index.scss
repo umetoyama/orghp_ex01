@@ -1,82 +1,70 @@
-.member-block-master {
+.member__master {
   padding-top: calc(12vh + 2px);
   padding-bottom: calc(12vh + 2px);
 }
 
-.member-list {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px; */
-  /* margin-left: 1px; */
-  /* margin-top: 6px; */
+.member__list {
   width: 40vw;
   margin: 0 auto;
+  // min-width: 400px;
 }
 
-.info-frame {
-  // display: inline-block;
-  width: 40vw;
-  // height: calc(100vh - (24vh + 4px));
-  // margin: 0 auto;
+.member__frame {
+  width: 100%;
   margin-bottom: 2px;
   border-radius: 6px;
   background-color: #fff;
   border: solid 1px darkgray;
   padding: 2%;
-  // overflow: hidden;
   font-family: '851マカポップ';
   color: red;
   font-size: 24px;
   position: relative;
 }
 
-.member-image-content {
-  /* width: 210px; */
+.member__image-content {
   height: 54vh;
   margin: 2% 2% 0 2%;
 }
 
-.member-image {
+.member__image-picture {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 4px;
 }
 
-.profile-text-p-n {
+.member__profile-text {
   display: inline-block;
-  margin-top: -6vh;
+  margin-top: -10vh;
   margin-left: 5%;
 }
 
-.profile-text-top {
+.member__profile-text-top {
   text-align: left;
-  /* line-height: 26px; */  
+  line-height: 0.7em;
   transform: rotate(-6deg);
   font-size: 52px;
   display: inline-block;
+  word-break: break-word;
+  // white-space: pre-line;
 }
 
-.top-blank {
-  margin-top: 2%;
-}
-
-.profile-text {
+.member__profile-text-works {
   text-align: left;
-  margin-top: 2vh;
+  margin-top: 4%;
   margin-left: 4%;
   /* line-height: 26px; */
-  display: inline-block;
+  display: block;
   word-break: break-all;
   white-space: pre-line;
-  max-width: calc(40vw - 6%);
-
-  max-height: 20%;
-  overflow-y: auto;
+  max-height: 50%;
+  overflow: auto;
   padding-bottom: 6px;
+  width: 90%;
 }
 
-.blowing {
+.member__blowing {
   position: absolute;
   top: 14vh;
   left: calc(40vw + 10px);
@@ -108,14 +96,14 @@
   }
 }
 
-.info-frame input {
+.member__frame input {
   display: none;
 }
 
-.info-frame input+.blowing {
+.member__frame input+.member__blowing {
   display: none;
 }
 
-.info-frame input:checked+.blowing {
+.member__frame input:checked+.member__blowing {
   display: block;
 }
