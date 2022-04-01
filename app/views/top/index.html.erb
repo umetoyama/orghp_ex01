@@ -66,7 +66,9 @@
               <% end %>
             </div>
             <% else %>
-            <%= render "shared/temporary_topic" %>
+            <div class="t__ex">
+              <%= render "shared/temporary_topic" %>
+            </div>
             <% end %>
           </div>
           <div class="ex-slidecover">
@@ -95,9 +97,12 @@
                 </span>
               </div>
               <% end %>
+            <%= render "shared/temporary_member" %>
             </div>
             <% else %>
-            <%= render "shared/temporary_member" %>
+            <div class="m__ex">
+              <%= render "shared/temporary_member" %>
+            <div>
             <% end %>
           </div>
           <div class="ex-slidecover">
