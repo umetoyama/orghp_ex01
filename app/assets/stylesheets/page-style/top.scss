@@ -146,7 +146,7 @@
     top: 33%;
     left: 40%;
     z-index: 3;
-    font-family: "A-OTF A1明朝 Std";
+    font-family: $cFontSentence;
   
     & P {
       color: rgb(255, 255, 255);
@@ -206,7 +206,7 @@
     height: 26vh;
     width: 30%;
     font-size: 1em;
-    font-family: "ヒラギノ角ゴ Pro";
+    font-family: $cFontHead;
     color: rgb(209, 172, 51);
     text-align: center;
     line-height: 26vh;
@@ -284,7 +284,7 @@
     height: 26vh;
     width: 30%;
     font-size: 1em;
-    font-family: "ヒラギノ角ゴ Pro";
+    font-family: $cFontHead;
     color: rgb(209, 172, 51);
     text-align: center;
     line-height: 26vh;
@@ -408,7 +408,7 @@
     height: 26vh;
     width: 30%;
     font-size: 1em;
-    font-family: "ヒラギノ角ゴ Pro";
+    font-family: $cFontHead;
     color: rgb(209, 172, 51);
     text-align: center;
     line-height: 26vh;
@@ -482,7 +482,7 @@
       }
       
       &-text {
-        font-family: '851マカポップ';
+        font-family: $cFontPen;
         color: red;
         font-size: 1.1em;
         // font-weight: 900;
@@ -514,7 +514,7 @@
   &__headline {
     width: 30%;
     font-size: 1em;
-    font-family: "ヒラギノ角ゴ Pro";
+    font-family: $cFontHead;
     color: rgb(209, 172, 51);
     text-align: center;
     font-weight: 100;

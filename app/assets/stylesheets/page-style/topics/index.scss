@@ -1,8 +1,10 @@
+@import '_parts/template.scss';
+
 .topics__master {
   padding-top: calc(12vh + 2px);
   margin-bottom: calc(12vh + 2px);
   width: 100vw;
-  font-family: "A-OTF A1明朝 Std";
+  font-family: $cFontSentence;
   padding-left: 2px;
   padding-right: 2px;
   position: relative;

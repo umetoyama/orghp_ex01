@@ -1,3 +1,5 @@
+@import '_parts/template.scss';
+
 .member__master {
   padding-top: calc(12vh + 2px);
   padding-bottom: calc(12vh + 2px);
@@ -16,7 +18,7 @@
   background-color: #fff;
   border: solid 1px darkgray;
   padding: 2%;
-  font-family: '851マカポップ';
+  font-family: $cFontPen;
   color: red;
   font-size: 24px;
   position: relative;
