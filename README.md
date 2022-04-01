@@ -11,8 +11,8 @@
  （社員用登録/ログインページ：https://orghp-ex01.herokuapp.com/users/new
 
  ## テスト用アカウント
-  email:  
-  password:  
+  email: test01@test.com  
+  password:  testest0101
 
  ### BASIC認証
   ユーザー名：master  
