@@ -85,7 +85,11 @@
               <% @profile_select.each do |member| %>
               <div class="m__ex-content max-cw">
                 <div class="m__ex-content-pic">
+                  <% if member.image.present? %>
                   <%= image_tag member.image.variant( resize: "50%"), class: "member__image-picture" %>
+                  <% else %>
+                  <img src="image/adult-g01119d51a_1280.jpg" width="50%" class="member__image-picture" alt="仮メンバー画像1">
+                  <% end %>
                 </div>
                 <span class="m__ex-content-text">
                   <span class="m__ex-content-pos">
