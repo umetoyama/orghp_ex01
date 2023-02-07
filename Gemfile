@@ -66,3 +66,7 @@ gem 'active_hash'
 gem 'actiontext'
 
 gem 'rack-cors'
+
+group :production do
+  gem 'pg'
+end
